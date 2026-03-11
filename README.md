@@ -30,8 +30,8 @@ Hiring managers evaluating non-traditional candidates (business background pivot
 - **Scroll-reveal animation system** with IntersectionObserver and staggered delays
 - **FAQ accordion** shared across index and hire-me pages
 - **Responsive breakpoints** at 1023px, 767px, and 639px with mobile nav overlay
-- **JHU shield watermark** as a faded background element in the Education section
-- **YouTube thumbnail embed** linking to a class project video
+- **JHU shield watermark** as a faded background element in the Education section (desktop); on mobile, the shield becomes a clickable card with play button overlay linking to the class project video
+- **YouTube thumbnail embed** linking to a class project video (desktop only)
 
 What's intentionally *not* in v1: no backend, no CMS, no contact form submission handler, no analytics. The site is pure static HTML/CSS/JS hosted on GitHub Pages. Backend features (real chatbot API, form handling) are planned for future iterations.
 
@@ -48,11 +48,16 @@ Tony's Site/
 │   ├── tokens.css          # Design tokens (custom properties)
 │   └── styles.css          # All component and layout styles
 ├── js/
-│   └── main.js             # Scroll reveal, nav, FAQ accordion, chatbot, about glow
+│   ├── main.js             # Scroll reveal, nav, FAQ accordion, chatbot, about glow
+│   └── wave.js             # Shared Three.js wave animation (configurable per page)
 ├── images/
-│   ├── jhu-shield.png      # Education section watermark
+│   ├── jhu-shield.png      # Education section watermark (desktop)
+│   ├── jhu-shield-cropped.png  # Cropped shield for mobile video card
 │   ├── jhu-logo.png
 │   └── jhu-logo.svg
+├── Tony Mikityuk - Resume 2026 PM.pdf
+├── AGENTS.md               # AI agent guide for repo conventions
+├── .gitignore
 └── office pic.webp         # Workspace photo in contact section
 ```
 
@@ -64,7 +69,7 @@ No build tools, no bundler, no package.json. External dependencies are loaded vi
 
 **Live:** Visit [tqny.github.io/Tony-s-Site](https://tqny.github.io/Tony-s-Site/). Deployed via GitHub Pages from the `main` branch.
 
-**Code review:** Start with `css/tokens.css` to understand the design system, then `css/styles.css` for component patterns, then `index.html` for the full page structure. `js/main.js` is ~185 lines covering all interactivity. The inline `<script>` block at the bottom of `index.html` handles the Three.js particle animation and Spline loader.
+**Code review:** Start with `css/tokens.css` to understand the design system, then `css/styles.css` for component patterns, then `index.html` for the full page structure. `js/main.js` is ~185 lines covering all interactivity. `js/wave.js` is the shared Three.js wave animation module used by index.html and project-site.html. The Spline 3D robot loads via web component CDN on the home page.
 
 ## What Judgment This Project Demonstrates
 
