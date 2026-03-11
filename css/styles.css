@@ -1537,15 +1537,15 @@ img {
     width: 140px;
     height: 140px;
     bottom: 3%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 4%;
+    transform: none;
   }
   .hero__robot {
     animation: robotFadeInMobile 1.2s ease forwards 1.5s;
   }
   @keyframes robotFadeInMobile {
-    from { opacity: 0; transform: translateX(-50%) translateY(20px); }
-    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
 }
 
