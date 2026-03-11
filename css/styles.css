@@ -502,6 +502,22 @@ img {
 }
 
 /* ==========================================
+   EDUCATION — JHU Shield Watermark
+   ========================================== */
+
+.edu-shield {
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 700px;
+  height: 700px;
+  pointer-events: none;
+  opacity: 0.04;
+  filter: brightness(0) invert(1);
+}
+
+/* ==========================================
    BUTTONS — Interactive Hover (slide + expanding dot)
    ========================================== */
 
@@ -1573,6 +1589,14 @@ img {
   }
   .skill-group--emphasis .skill-group__tags {
     grid-template-columns: 1fr 1fr !important;
+  }
+  .edu-shield {
+    width: 300px;
+    height: 300px;
+    right: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.03;
   }
   .project-grid {
     grid-template-columns: 1fr;
