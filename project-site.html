@@ -35,7 +35,7 @@
 
         <div class="project-meta-bar">
           <span class="badge">Web Development</span>
-          <span class="text-small">2025</span>
+          <span class="text-small">2026</span>
           <span class="project-meta-bar__separator"></span>
           <span class="text-small">HTML, CSS, JavaScript, Three.js, Spline 3D</span>
           <span class="project-meta-bar__separator"></span>
@@ -60,10 +60,10 @@
     </div>
   </section>
 
-  <!-- Hero Image -->
-  <section class="container" style="max-width: 1000px;">
-    <div class="hero-image reveal">
-      <span class="hero-image__placeholder">Site Screenshot</span>
+  <!-- Hero Visual — Full-width wave pattern -->
+  <section style="width: 100%; padding: 0;">
+    <div id="waveHero" style="width: 100%; aspect-ratio: 16 / 9; max-height: 480px; background: #0A0A0A; position: relative; overflow: hidden;">
+      <!-- Three.js canvas injected here -->
     </div>
   </section>
 
@@ -102,14 +102,16 @@
   <!-- Gallery -->
   <section style="padding-bottom: var(--space-6);">
     <div class="container" style="max-width: 1000px;">
-      <h2 class="heading-section reveal" style="margin-bottom: var(--space-4);">Gallery</h2>
+      <h2 class="heading-section reveal" style="margin-bottom: var(--space-6);">Gallery</h2>
+    </div>
+    <div class="container" style="max-width: 1400px;">
       <div class="image-gallery image-gallery--2col reveal">
-        <div class="gallery-image"><span class="gallery-image__placeholder">Hero Section</span></div>
-        <div class="gallery-image"><span class="gallery-image__placeholder">About & Skills</span></div>
+        <div class="gallery-image" style="background: #000;"><img src="images/gallery-hero.png" alt="Hero section on laptop" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <div class="gallery-image" style="background: #000;"><img src="images/gallery-skills.png" alt="About & Skills on iPad" style="width: 100%; height: 100%; object-fit: cover;"></div>
       </div>
       <div class="image-gallery image-gallery--2col reveal" data-delay="100">
-        <div class="gallery-image"><span class="gallery-image__placeholder">Contact & FAQ</span></div>
-        <div class="gallery-image"><span class="gallery-image__placeholder">Chatbot Widget</span></div>
+        <div class="gallery-image" style="background: #000;"><img src="images/gallery-faq.png" alt="Contact & FAQ on iPhone" style="width: 100%; height: 100%; object-fit: cover; object-position: top;"></div>
+        <div class="gallery-image" style="background: #000;"><img src="images/gallery-repo.png" alt="GitHub repository" style="width: 100%; height: 100%; object-fit: cover;"></div>
       </div>
     </div>
   </section>
@@ -131,7 +133,7 @@
           <div class="project-card__body">
             <div class="project-card__badges">
               <span class="badge">Agentic Systems</span>
-              <span class="text-small">2025</span>
+              <span class="text-small">2026</span>
             </div>
             <h3 class="heading-card">Multi-Agent Research Assistant</h3>
             <p class="project-card__desc">Autonomous research pipeline using LangGraph and GPT-4.</p>
@@ -142,7 +144,7 @@
           <div class="project-card__body">
             <div class="project-card__badges">
               <span class="badge">Workflow Automation</span>
-              <span class="text-small">2025</span>
+              <span class="text-small">2026</span>
             </div>
             <h3 class="heading-card">Customer Success Workflow Automation</h3>
             <p class="project-card__desc">AI-powered ticket routing and response generation.</p>
@@ -167,7 +169,7 @@
 
   <footer class="container">
     <div class="footer">
-      <span class="footer__credits">&copy; 2025 Tony Mikityuk</span>
+      <span class="footer__credits">&copy; 2026 Tony Mikityuk</span>
       <ul class="footer__links">
         <li><a href="mailto:mikityuk.tony@gmail.com">Email</a></li>
         <li><a href="https://linkedin.com/in/tony-mikityuk" target="_blank">LinkedIn</a></li>
@@ -208,6 +210,98 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
   </button>
 
+  <!-- Three.js for wave hero -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    // --- Wave pattern hero (synced to home page speed) ---
+    (function() {
+      var container = document.getElementById('waveHero');
+      if (!container || typeof THREE === 'undefined') return;
+
+      var SEPARATION = 150;
+      var AMOUNTX = 40;
+      var AMOUNTY = 60;
+
+      var scene = new THREE.Scene();
+      scene.fog = new THREE.Fog(0x0a0a0a, 2000, 10000);
+
+      var w = container.offsetWidth;
+      var h = container.offsetHeight;
+
+      var camera = new THREE.PerspectiveCamera(60, w / h, 1, 10000);
+      camera.position.set(0, 480, 1400);
+      camera.lookAt(0, 0, 200);
+
+      var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(w, h);
+      renderer.setClearColor(0x000000, 0);
+      renderer.domElement.style.position = 'absolute';
+      renderer.domElement.style.inset = '0';
+      renderer.domElement.style.zIndex = '0';
+      container.appendChild(renderer.domElement);
+
+      var positions = [];
+      var colors = [];
+      var geometry = new THREE.BufferGeometry();
+
+      for (var ix = 0; ix < AMOUNTX; ix++) {
+        for (var iy = 0; iy < AMOUNTY; iy++) {
+          var x = ix * SEPARATION - (AMOUNTX * SEPARATION) / 2;
+          var y = 0;
+          var z = iy * SEPARATION - (AMOUNTY * SEPARATION) / 2;
+          positions.push(x, y, z);
+          colors.push(0.78, 0.78, 0.78);
+        }
+      }
+
+      geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+      geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+
+      var material = new THREE.PointsMaterial({
+        size: 8,
+        vertexColors: true,
+        transparent: true,
+        opacity: 0.8,
+        sizeAttenuation: true
+      });
+
+      var points = new THREE.Points(geometry, material);
+      scene.add(points);
+
+      var count = 0;
+
+      function animate() {
+        requestAnimationFrame(animate);
+        var posAttr = geometry.attributes.position;
+        var arr = posAttr.array;
+        var i = 0;
+        for (var ix = 0; ix < AMOUNTX; ix++) {
+          for (var iy = 0; iy < AMOUNTY; iy++) {
+            var idx = i * 3;
+            arr[idx + 1] =
+              Math.sin((ix + count) * 0.3) * 50 +
+              Math.sin((iy + count) * 0.5) * 50;
+            i++;
+          }
+        }
+        posAttr.needsUpdate = true;
+        renderer.render(scene, camera);
+        count += 0.03; // Synced with home page
+      }
+
+      function handleResize() {
+        var w2 = container.offsetWidth;
+        var h2 = container.offsetHeight;
+        camera.aspect = w2 / h2;
+        camera.updateProjectionMatrix();
+        renderer.setSize(w2, h2);
+      }
+
+      window.addEventListener('resize', handleResize);
+      animate();
+    })();
+  </script>
 </body>
 </html>
