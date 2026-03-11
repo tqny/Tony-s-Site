@@ -230,7 +230,7 @@
     </div>
 
     <div class="reveal" style="margin-top: var(--space-6);">
-      <a href="https://linkedin.com/in/tony-mikityuk" target="_blank" class="link-arrow">See full experience on LinkedIn</a>
+      <a href="https://www.linkedin.com/in/tonymikityuk/" target="_blank" class="link-arrow">See full experience on LinkedIn</a>
     </div>
     </div>
   </section>
@@ -297,11 +297,11 @@
               <svg class="contact-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
               <span>mikityuk.tony@gmail.com</span>
             </a>
-            <a href="https://linkedin.com/in/tony-mikityuk" target="_blank" class="contact-link">
+            <a href="https://www.linkedin.com/in/tonymikityuk/" target="_blank" class="contact-link">
               <svg class="contact-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
               <span>LinkedIn Profile</span>
             </a>
-            <a href="#" class="contact-link">
+            <a href="Tony%20Mikityuk%20-%20Resume%202026%20PM.pdf" download class="contact-link">
               <svg class="contact-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
               <span>Download Resume</span>
             </a>
@@ -391,8 +391,8 @@
       <span class="footer__credits">&copy; 2026 Tony Mikityuk</span>
       <ul class="footer__links">
         <li><a href="mailto:mikityuk.tony@gmail.com">Email</a></li>
-        <li><a href="https://linkedin.com/in/tony-mikityuk" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/tonymikityuk/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/tqny/Tony-s-Site" target="_blank">GitHub</a></li>
       </ul>
     </div>
   </footer>
@@ -448,103 +448,20 @@
       }, 8000);
     }
   </script>
+  <script src="js/wave.js"></script>
   <script>
-    // --- Dotted Surface (ported from React/Three.js component) ---
-    (function() {
-      var container = document.getElementById('heroDotsContainer');
-      if (!container || typeof THREE === 'undefined') return;
+    initWaveAnimation({
+      containerId: 'heroDotsContainer',
+      useWindow: true,
+      cameraX: 0, cameraY: 355, cameraZ: 1220
+    });
 
-      var SEPARATION = 150;
-      var AMOUNTX = 40;
-      var AMOUNTY = 60;
-
-      // Scene
-      var scene = new THREE.Scene();
-      scene.fog = new THREE.Fog(0x0a0a0a, 2000, 10000);
-
-      // Camera
-      var camera = new THREE.PerspectiveCamera(
-        60, window.innerWidth / window.innerHeight, 1, 10000
-      );
-      camera.position.set(0, 355, 1220);
-
-      // Renderer
-      var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-      renderer.setPixelRatio(window.devicePixelRatio);
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setClearColor(0x000000, 0);
-      container.appendChild(renderer.domElement);
-
-      // Particles
-      var positions = [];
-      var colors = [];
-      var geometry = new THREE.BufferGeometry();
-
-      for (var ix = 0; ix < AMOUNTX; ix++) {
-        for (var iy = 0; iy < AMOUNTY; iy++) {
-          var x = ix * SEPARATION - (AMOUNTX * SEPARATION) / 2;
-          var y = 0;
-          var z = iy * SEPARATION - (AMOUNTY * SEPARATION) / 2;
-          positions.push(x, y, z);
-          // Soft white-grey dots for dark theme
-          colors.push(0.78, 0.78, 0.78);
-        }
-      }
-
-      geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-      geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
-
-      var material = new THREE.PointsMaterial({
-        size: 8,
-        vertexColors: true,
-        transparent: true,
-        opacity: 0.8,
-        sizeAttenuation: true
+    // Trigger hero text animation after a short delay
+    setTimeout(function() {
+      document.querySelectorAll('.hero-anim').forEach(function(el) {
+        el.classList.add('hero-anim--active');
       });
-
-      var points = new THREE.Points(geometry, material);
-      scene.add(points);
-
-      var count = 0;
-      var animationId;
-
-      function animate() {
-        animationId = requestAnimationFrame(animate);
-
-        var posAttr = geometry.attributes.position;
-        var arr = posAttr.array;
-        var i = 0;
-
-        for (var ix = 0; ix < AMOUNTX; ix++) {
-          for (var iy = 0; iy < AMOUNTY; iy++) {
-            var idx = i * 3;
-            arr[idx + 1] =
-              Math.sin((ix + count) * 0.3) * 50 +
-              Math.sin((iy + count) * 0.5) * 50;
-            i++;
-          }
-        }
-        posAttr.needsUpdate = true;
-        renderer.render(scene, camera);
-        count += 0.03;
-      }
-
-      function handleResize() {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-      }
-
-      window.addEventListener('resize', handleResize);
-      animate();
-
-      // Trigger hero text animation after a short delay
-      setTimeout(function() {
-        document.querySelectorAll('.hero-anim').forEach(function(el) {
-          el.classList.add('hero-anim--active');
-        });
-      }, 400);
-    })();
+    }, 400);
   </script>
 </body>
 </html>
