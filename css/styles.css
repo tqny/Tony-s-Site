@@ -1595,7 +1595,9 @@ img {
     height: 300px;
     right: auto;
     left: 50%;
-    transform: translate(-50%, -50%);
+    top: auto;
+    bottom: -40px;
+    transform: translateX(-50%);
     opacity: 0.03;
   }
   .project-grid {
