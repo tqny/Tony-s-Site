@@ -151,7 +151,7 @@
 
   <!-- Education -->
   <section class="section" id="education" style="position: relative; overflow: hidden;">
-    <!-- JHU shield — faded background watermark -->
+    <!-- JHU shield — faded background watermark (desktop only) -->
     <div class="edu-shield" aria-hidden="true">
       <img src="images/jhu-shield.png" alt="" style="width: 100%; height: 100%; object-fit: contain;">
     </div>
@@ -170,8 +170,19 @@
               <li style="max-width: 340px;">Branding Case (Gong.io): created recruiting campaign for Gong.io/careers</li>
             </ul>
             <div style="margin-top: var(--space-2);">
-              <a href="https://www.youtube.com/watch?v=f3TDazHo4ds" target="_blank" style="display: block; position: relative; width: 100%; max-width: 320px; aspect-ratio: 16 / 9; border-radius: 4px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); background: #000;">
+              <!-- Desktop: YouTube thumbnail -->
+              <a href="https://www.youtube.com/watch?v=f3TDazHo4ds" target="_blank" class="edu-video edu-video--desktop" style="display: block; position: relative; width: 100%; max-width: 320px; aspect-ratio: 16 / 9; border-radius: 4px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); background: #000;">
                 <img src="https://img.youtube.com/vi/f3TDazHo4ds/hqdefault.jpg" alt="Gong.io Branding Campaign" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; transition: opacity 0.3s ease;">
+                <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                  <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.5)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                    <path d="M22 18L40 28L22 38V18Z" fill="rgba(255,255,255,0.9)"/>
+                  </svg>
+                </div>
+              </a>
+              <!-- Mobile: JHU shield with play button -->
+              <a href="https://www.youtube.com/watch?v=f3TDazHo4ds" target="_blank" class="edu-video edu-video--mobile" style="display: none; position: relative; width: 100%; max-width: 200px; aspect-ratio: 1 / 1; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); background: rgba(0,0,0,0.3);">
+                <img src="images/jhu-shield-cropped.png" alt="JHU Branding Campaign – Watch on YouTube" style="width: 88%; height: 88%; object-fit: contain; margin: 6% auto; opacity: 0.85; transition: opacity 0.3s ease; filter: brightness(0) invert(1);">
                 <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
                   <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.5)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>

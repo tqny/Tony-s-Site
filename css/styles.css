@@ -1591,14 +1591,13 @@ img {
     grid-template-columns: 1fr 1fr !important;
   }
   .edu-shield {
-    width: 300px;
-    height: 300px;
-    right: auto;
-    left: 50%;
-    top: auto;
-    bottom: -40px;
-    transform: translateX(-50%);
-    opacity: 0.03;
+    display: none;
+  }
+  .edu-video--desktop {
+    display: none !important;
+  }
+  .edu-video--mobile {
+    display: block !important;
   }
   .project-grid {
     grid-template-columns: 1fr;
