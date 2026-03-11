@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tony Mikityuk — Program Manager & Customer Success | AI-Enabled Professional</title>
+  <meta name="description" content="Program-oriented professional building AI-enabled workflows and agentic engineering projects. MS in Marketing Analytics from Johns Hopkins.">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Tony Mikityuk</a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link nav__link--active">Home</a></li>
+        <li><a href="projects.html" class="nav__link">Agentic Projects</a></li>
+        <li><a href="hire-me.html" class="nav__link">Contact & FAQ</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__overlay">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Agentic Projects</a>
+    <a href="hire-me.html">Contact & FAQ</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <!-- Three.js dotted surface background -->
+    <div class="hero__dots" id="heroDotsContainer" aria-hidden="true"></div>
+
+    <!-- Radial glow overlay -->
+    <div class="hero__glow" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <h1 class="hero__name hero-anim hero-anim--name">Tony Mikityuk</h1>
+    </div>
+
+    <div class="hero__ctas hero-anim hero-anim--ctas">
+      <a href="projects.html" class="btn btn--outline">
+        <span class="btn__text">View Projects</span>
+        <span class="btn__hover">View Projects <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        <span class="btn__dot"></span>
+      </a>
+      <a href="hire-me.html" class="btn btn--outline">
+        <span class="btn__text">Contact</span>
+        <span class="btn__hover">Contact <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        <span class="btn__dot"></span>
+      </a>
+    </div>
+
+    <!-- 3D Robot — bottom-left, nearest to viewer -->
+    <div class="hero__robot" id="robotContainer" onclick="toggleChat()" title="Chat with Tony's AI assistant">
+      <spline-viewer
+        url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+        loading-anim-type="spinner-small-dark"
+      ></spline-viewer>
+      <div class="hero__robot-loader" id="robotLoader">
+        <span class="loader"></span>
+      </div>
+      <span class="hero__robot-label">Tap Here</span>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section container--mid about-track" id="about">
+    <!-- Mouse-tracking gradient overlay -->
+    <div class="about-track__glow" aria-hidden="true"></div>
+    <div class="reveal">
+      <h2 class="heading-section" style="margin-bottom: var(--space-4)">About</h2>
+      <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+        <p class="text-body-lg">
+          Program Manager and customer-facing professional with experience across SaaS sales, healthcare, and AI-enabled operations. Background includes driving pipeline, managing customer relationships, supporting complex stakeholder engagements, and improving AI/LLM quality.
+        </p>
+        <p class="text-body-lg">
+          MS in Marketing Analytics from Johns Hopkins.
+        </p>
+        <p class="text-body-lg">
+          Now building agentic engineering projects and AI-enabled workflows that connect commercial execution with program management discipline. The same skill set used to build this site and the projects featured here.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section section--alt" id="skills">
+    <div class="container--mid">
+      <div class="reveal">
+        <h2 class="heading-section" style="margin-bottom: var(--space-6)">Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group reveal" data-delay="0">
+          <h3 class="skill-group__title">Program / Project Leadership</h3>
+          <div class="skill-group__tags">
+            <span class="badge">Cross-functional coordination</span>
+            <span class="badge">Stakeholder management</span>
+            <span class="badge">Timeline & deliverable tracking</span>
+            <span class="badge">Risk mitigation</span>
+          </div>
+        </div>
+        <div class="skill-group reveal" data-delay="50">
+          <h3 class="skill-group__title">Customer & Stakeholder Management</h3>
+          <div class="skill-group__tags">
+            <span class="badge">Client-facing communication</span>
+            <span class="badge">Requirement gathering</span>
+            <span class="badge">Expectation alignment</span>
+            <span class="badge">Relationship building</span>
+          </div>
+        </div>
+        <div class="skill-group reveal" data-delay="100">
+          <h3 class="skill-group__title">GTM / Client-Facing Experience</h3>
+          <div class="skill-group__tags">
+            <span class="badge">Solution positioning</span>
+            <span class="badge">Discovery & needs analysis</span>
+            <span class="badge">Objection handling</span>
+            <span class="badge">Territory management</span>
+          </div>
+        </div>
+        <div class="skill-group reveal" data-delay="150">
+          <h3 class="skill-group__title">Analytics & Structured Thinking</h3>
+          <div class="skill-group__tags">
+            <span class="badge">Data analysis</span>
+            <span class="badge">Predictive modeling</span>
+            <span class="badge">Process optimization</span>
+            <span class="badge">Metrics definition</span>
+          </div>
+        </div>
+        <div class="skill-group skill-group--emphasis reveal" data-delay="200">
+          <h3 class="skill-group__title">AI Workflow / Agentic Tooling</h3>
+          <div class="skill-group__tags" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;">
+            <span class="badge badge--filled">Documentation-Driven Development</span>
+            <span class="badge badge--filled">Three.js & Spline 3D Integration</span>
+            <span class="badge badge--filled">Model Evaluation & RLHF</span>
+            <span class="badge badge--filled">React / TypeScript / Tailwind</span>
+            <span class="badge badge--filled">CSS Design System Architecture</span>
+            <span class="badge badge--filled">Codex + Claude Code & Cowork</span>
+            <span class="badge badge--filled">Modular Architecture Planning</span>
+            <span class="badge badge--filled">AI+Iterative Development</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section" id="education" style="position: relative; overflow: hidden;">
+    <!-- JHU shield — faded background watermark -->
+    <div style="position: absolute; right: 2%; top: 50%; transform: translateY(-50%); width: 700px; height: 700px; pointer-events: none; opacity: 0.04; filter: brightness(0) invert(1);">
+      <img src="images/jhu-shield.png" alt="" aria-hidden="true" style="width: 100%; height: 100%; object-fit: contain;">
+    </div>
+    <div class="container--mid">
+      <div class="reveal">
+        <h2 class="heading-section" style="margin-bottom: var(--space-6)">Education</h2>
+        <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+          <div class="bl-block">
+            <h3 class="bl-block__title">Johns Hopkins University</h3>
+            <p class="bl-block__subtitle">MS in Marketing Analytics</p>
+            <p class="bl-block__meta">Dean's Scholarship · 3.8 GPA · 2020–2023</p>
+            <ul class="bl-block__bullets" style="margin-top: var(--space-2);">
+              <li>Statistical Analysis</li>
+              <li>Consumer Behavior</li>
+              <li>Social Media Analytics</li>
+              <li style="max-width: 340px;">Branding Case (Gong.io): created recruiting campaign for Gong.io/careers</li>
+            </ul>
+            <div style="margin-top: var(--space-2);">
+              <a href="https://www.youtube.com/watch?v=f3TDazHo4ds" target="_blank" style="display: block; position: relative; width: 100%; max-width: 320px; aspect-ratio: 16 / 9; border-radius: 4px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); background: #000;">
+                <img src="https://img.youtube.com/vi/f3TDazHo4ds/hqdefault.jpg" alt="Gong.io Branding Campaign" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7; transition: opacity 0.3s ease;">
+                <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                  <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="28" cy="28" r="27" fill="rgba(0,0,0,0.5)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                    <path d="M22 18L40 28L22 38V18Z" fill="rgba(255,255,255,0.9)"/>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section section--alt" id="experience">
+    <div class="container--mid">
+    <div class="reveal">
+      <h2 class="heading-section" style="margin-bottom: var(--space-6)">Experience</h2>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: var(--space-5);">
+      <div class="bl-block reveal" data-delay="0">
+        <h3 class="bl-block__title" style="font-size: var(--text-xl);">AI Model Training - Marketing</h3>
+        <p class="bl-block__subtitle">Outlier / Scale AI</p>
+        <p class="bl-block__meta">Nov 2023 – Sep 2024</p>
+        <ul class="bl-block__bullets">
+          <li>Assessed AI-generated responses for factual accuracy, reasoning quality, and relevance across marketing and business strategy</li>
+          <li>Created domain-specific prompts covering GTM strategy, competitive analysis, and executive communication</li>
+          <li>Evaluated and ranked model outputs, annotating reasoning errors to support RLHF workflows</li>
+        </ul>
+      </div>
+
+      <div class="bl-block reveal" data-delay="100">
+        <h3 class="bl-block__title" style="font-size: var(--text-xl);">Territory Sales Manager</h3>
+        <p class="bl-block__subtitle">Allegiance Medical</p>
+        <p class="bl-block__meta">Jul 2021 – Sep 2023</p>
+        <ul class="bl-block__bullets">
+          <li>Owned $3–5M annual territory across spine & pain management accounts in WA and OR</li>
+          <li>Served as lead technical specialist for 100+ procedures per year, driving repeat utilization</li>
+          <li>Delivered 50+ physician and hospital demos, influencing adoption through technical credibility</li>
+        </ul>
+      </div>
+
+      <div class="bl-block reveal" data-delay="150">
+        <h3 class="bl-block__title" style="font-size: var(--text-xl);">Product Consultant</h3>
+        <p class="bl-block__subtitle">Monday.com</p>
+        <p class="bl-block__meta">Jan 2020 – Mar 2021</p>
+        <ul class="bl-block__bullets">
+          <li>Converted inbound free-trial users into 25–35 SQLs/month across mid-market and enterprise accounts</li>
+          <li>Drove 35–45% PQL-to-opportunity conversion through consultative discovery and tailored demos</li>
+          <li>Sourced $1.5M+ in annualized, AE-accepted pipeline through inbound PQL qualification</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="reveal" style="margin-top: var(--space-6);">
+      <a href="https://linkedin.com/in/tony-mikityuk" target="_blank" class="link-arrow">See full experience on LinkedIn</a>
+    </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="section" id="projects">
+    <div class="container" style="max-width: 1100px;">
+      <div class="reveal" style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-6); flex-wrap: wrap; gap: var(--space-2);">
+        <h2 class="heading-section">Featured Projects</h2>
+        <a href="projects.html" class="btn btn--ghost">
+          <span class="btn__text">View All →</span>
+        </a>
+      </div>
+      <div class="project-grid reveal">
+        <a href="project-detail.html" class="project-card">
+          <div class="project-card__image">
+            <span class="project-card__placeholder">Project 01</span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__badges">
+              <span class="badge">AI Workflow</span>
+              <span class="text-small">2025</span>
+            </div>
+            <h3 class="project-card__title">AI Workflow Orchestrator</h3>
+            <p class="project-card__desc">An agentic pipeline that coordinates multi-step tasks across APIs and LLM calls, with built-in error handling and retry logic.</p>
+          </div>
+        </a>
+        <a href="project-detail.html" class="project-card">
+          <div class="project-card__image">
+            <span class="project-card__placeholder">Project 02</span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__badges">
+              <span class="badge">Agentic Tool</span>
+              <span class="text-small">2025</span>
+            </div>
+            <h3 class="project-card__title">Intelligent Document Analyzer</h3>
+            <p class="project-card__desc">A tool that extracts structured data from unstructured documents using LLM-powered parsing and validation chains.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & FAQ (Looking Forward) -->
+  <section class="section" id="contact">
+    <div class="container--mid">
+
+      <!-- Heading + subtitle -->
+      <div class="reveal" style="text-align: center; margin-bottom: var(--space-10);">
+        <h2 class="heading-display" style="margin-bottom: var(--space-4);">Looking Forward</h2>
+        <p class="text-body-lg" style="max-width: 640px; margin: 0 auto;">
+          I'm open to program management, customer success, and AI-enabled project opportunities. Let's connect and explore how I can contribute to your team.
+        </p>
+      </div>
+
+      <!-- Two-column: Contact Info + Form -->
+      <div class="hire-grid reveal">
+        <!-- Left: Contact Information -->
+        <div>
+          <h3 class="heading-subsection" style="margin-bottom: var(--space-4);">Contact Information</h3>
+          <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+            <a href="mailto:mikityuk.tony@gmail.com" class="contact-link">
+              <svg class="contact-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>mikityuk.tony@gmail.com</span>
+            </a>
+            <a href="https://linkedin.com/in/tony-mikityuk" target="_blank" class="contact-link">
+              <svg class="contact-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              <span>LinkedIn Profile</span>
+            </a>
+            <a href="#" class="contact-link">
+              <svg class="contact-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              <span>Download Resume</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Send a Message -->
+        <div>
+          <h3 class="heading-subsection" style="margin-bottom: var(--space-4);">Send a Message</h3>
+          <form action="#" method="POST">
+            <div class="form__group">
+              <input type="text" class="form__input" placeholder="Name" required>
+            </div>
+            <div class="form__group">
+              <input type="email" class="form__input" placeholder="Email" required>
+            </div>
+            <div class="form__group">
+              <textarea class="form__textarea" placeholder="Message" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+              <span class="btn__text">Send Message</span>
+              <span class="btn__hover">Send Message <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+              <span class="btn__dot"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div style="margin-top: var(--space-10);">
+        <div class="reveal">
+          <h3 class="heading-subsection" style="margin-bottom: var(--space-4);">Frequently Asked Questions</h3>
+        </div>
+        <ul class="faq-list">
+          <li class="faq-item reveal">
+            <button class="faq-item__trigger">
+              <span>What roles am I looking for?</span>
+              <span class="faq-item__icon">▾</span>
+            </button>
+            <div class="faq-item__content">
+              <p class="faq-item__text">I'm targeting program management, AI-enabled operations, and agentic workflow builder roles. I'm most interested in positions where I can combine program thinking with hands-on AI tooling — translating business needs into practical systems. Product-adjacent and customer success/enablement roles are also a strong fit.</p>
+            </div>
+          </li>
+          <li class="faq-item reveal" data-delay="50">
+            <button class="faq-item__trigger">
+              <span>Work style & availability</span>
+              <span class="faq-item__icon">▾</span>
+            </button>
+            <div class="faq-item__content">
+              <p class="faq-item__text">I'm based in Bothell, WA and open to remote, hybrid, or on-site opportunities in the Seattle area. I thrive in collaborative environments where I can work across teams — engineering, product, sales, and customers. Available for full-time roles and open to contract/consulting for the right project.</p>
+            </div>
+          </li>
+          <li class="faq-item reveal" data-delay="100">
+            <button class="faq-item__trigger">
+              <span>Technical approach</span>
+              <span class="faq-item__icon">▾</span>
+            </button>
+            <div class="faq-item__content">
+              <p class="faq-item__text">I come from a business and operations background, not a CS degree. My technical skills are growing intentionally — I build with Python, LangChain, and modern AI APIs, and I think about systems in terms of workflows, stakeholders, and outcomes. I've evaluated LLM outputs professionally at Scale AI and I'm building agentic tools to deepen that capability.</p>
+            </div>
+          </li>
+          <li class="faq-item reveal" data-delay="150">
+            <button class="faq-item__trigger">
+              <span>Collaboration style</span>
+              <span class="faq-item__icon">▾</span>
+            </button>
+            <div class="faq-item__content">
+              <p class="faq-item__text">I lead with clarity and structure. I ask questions, document decisions, and keep everyone aligned. I'm comfortable managing up, down, and across — whether that's updating executives, coordinating with engineers, or interfacing directly with customers.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Workspace Image -->
+      <div class="reveal" style="margin-top: var(--space-8);">
+        <div style="width: 100%; aspect-ratio: 16 / 9; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+          <img src="office%20pic.webp" alt="Modern workspace" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="container">
+    <div class="footer">
+      <span class="footer__credits">&copy; 2025 Tony Mikityuk</span>
+      <ul class="footer__links">
+        <li><a href="mailto:mikityuk.tony@gmail.com">Email</a></li>
+        <li><a href="https://linkedin.com/in/tony-mikityuk" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <div class="chatbot-panel" id="chatbot">
+    <div class="chatbot-panel__body">
+      <div class="chatbot-panel__header">
+        <div>
+          <div class="chatbot-panel__title">AI Assistant</div>
+          <div class="chatbot-panel__subtitle">Ask me about Tony</div>
+        </div>
+        <button class="chatbot-panel__close" onclick="toggleChat()">✕</button>
+      </div>
+      <div class="chatbot-panel__messages" id="chatMessages">
+        <div class="chat-msg chat-msg--assistant">Hi! I'm Tony's AI assistant. Ask me about his background, projects, or how he can help your team.</div>
+      </div>
+      <div class="chatbot-panel__form-wrap">
+        <div class="chatbot-panel__input-shell">
+          <div class="chatbot-panel__input-inner">
+            <form class="chatbot-panel__form" onsubmit="handleChat(event)">
+              <textarea class="chatbot-panel__input" id="chatInput" placeholder="Send a message..." rows="1" autocomplete="off"></textarea>
+              <button type="submit" class="chatbot-panel__send" id="chatSend">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="chatbot-panel__input-shadow"></div>
+      </div>
+    </div>
+  </div>
+  <button class="chatbot-toggle" onclick="toggleChat()" aria-label="Chat">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+  </button>
+
+  <!-- Three.js for dotted surface -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Spline 3D Viewer (vanilla web component — no React needed) -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Hide robot loader once Spline scene is ready
+    const viewer = document.querySelector('spline-viewer');
+    if (viewer) {
+      viewer.addEventListener('load', function() {
+        var loader = document.getElementById('robotLoader');
+        if (loader) loader.classList.add('hidden');
+      });
+      setTimeout(function() {
+        var loader = document.getElementById('robotLoader');
+        if (loader) loader.classList.add('hidden');
+      }, 8000);
+    }
+  </script>
+  <script>
+    // --- Dotted Surface (ported from React/Three.js component) ---
+    (function() {
+      var container = document.getElementById('heroDotsContainer');
+      if (!container || typeof THREE === 'undefined') return;
+
+      var SEPARATION = 150;
+      var AMOUNTX = 40;
+      var AMOUNTY = 60;
+
+      // Scene
+      var scene = new THREE.Scene();
+      scene.fog = new THREE.Fog(0x0a0a0a, 2000, 10000);
+
+      // Camera
+      var camera = new THREE.PerspectiveCamera(
+        60, window.innerWidth / window.innerHeight, 1, 10000
+      );
+      camera.position.set(0, 355, 1220);
+
+      // Renderer
+      var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setClearColor(0x000000, 0);
+      container.appendChild(renderer.domElement);
+
+      // Particles
+      var positions = [];
+      var colors = [];
+      var geometry = new THREE.BufferGeometry();
+
+      for (var ix = 0; ix < AMOUNTX; ix++) {
+        for (var iy = 0; iy < AMOUNTY; iy++) {
+          var x = ix * SEPARATION - (AMOUNTX * SEPARATION) / 2;
+          var y = 0;
+          var z = iy * SEPARATION - (AMOUNTY * SEPARATION) / 2;
+          positions.push(x, y, z);
+          // Soft white-grey dots for dark theme
+          colors.push(0.78, 0.78, 0.78);
+        }
+      }
+
+      geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+      geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+
+      var material = new THREE.PointsMaterial({
+        size: 8,
+        vertexColors: true,
+        transparent: true,
+        opacity: 0.8,
+        sizeAttenuation: true
+      });
+
+      var points = new THREE.Points(geometry, material);
+      scene.add(points);
+
+      var count = 0;
+      var animationId;
+
+      function animate() {
+        animationId = requestAnimationFrame(animate);
+
+        var posAttr = geometry.attributes.position;
+        var arr = posAttr.array;
+        var i = 0;
+
+        for (var ix = 0; ix < AMOUNTX; ix++) {
+          for (var iy = 0; iy < AMOUNTY; iy++) {
+            var idx = i * 3;
+            arr[idx + 1] =
+              Math.sin((ix + count) * 0.3) * 50 +
+              Math.sin((iy + count) * 0.5) * 50;
+            i++;
+          }
+        }
+        posAttr.needsUpdate = true;
+        renderer.render(scene, camera);
+        count += 0.03;
+      }
+
+      function handleResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      }
+
+      window.addEventListener('resize', handleResize);
+      animate();
+
+      // Trigger hero text animation after a short delay
+      setTimeout(function() {
+        document.querySelectorAll('.hero-anim').forEach(function(el) {
+          el.classList.add('hero-anim--active');
+        });
+      }, 400);
+    })();
+  </script>
+</body>
+</html>

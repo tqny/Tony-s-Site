@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & FAQ — Tony Mikityuk</title>
+  <meta name="description" content="Get in touch with Tony Mikityuk. Download resume, connect on LinkedIn, or send a message.">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Tony Mikityuk</a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="projects.html" class="nav__link">Agentic Projects</a></li>
+        <li><a href="hire-me.html" class="nav__link nav__link--active">Contact & FAQ</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav__overlay">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Agentic Projects</a>
+    <a href="hire-me.html">Contact & FAQ</a>
+  </div>
+
+  <!-- Page Hero -->
+  <section style="padding-top: calc(64px + var(--space-10)); padding-bottom: var(--space-6);">
+    <div class="container--mid">
+      <div class="reveal">
+        <h1 class="heading-display" style="margin-bottom: var(--space-4);">Let's Work Together</h1>
+        <p class="text-body-xl" style="max-width: 600px;">
+          I'm looking for opportunities where I can bring program discipline to AI initiatives — coordinating technical teams, managing stakeholder expectations, and building systems that bridge strategy and implementation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact + Form (2-column) -->
+  <section class="section">
+    <div class="container--mid">
+      <div class="hire-grid">
+        <!-- Left: Contact -->
+        <div class="reveal--left reveal">
+          <h2 class="heading-subsection" style="margin-bottom: var(--space-4);">Contact</h2>
+          <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+            <a href="mailto:mikityuk.tony@gmail.com" class="contact-link">
+              <svg class="contact-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>mikityuk.tony@gmail.com</span>
+            </a>
+            <a href="https://linkedin.com/in/tony-mikityuk" target="_blank" class="contact-link">
+              <svg class="contact-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              <span>LinkedIn Profile</span>
+            </a>
+            <a href="#" class="contact-link">
+              <svg class="contact-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              <span>Download Resume</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="reveal--right reveal">
+          <h2 class="heading-subsection" style="margin-bottom: var(--space-4);">Send a Message</h2>
+          <form action="#" method="POST">
+            <div class="form__group">
+              <input type="text" class="form__input" placeholder="Name" required>
+            </div>
+            <div class="form__group">
+              <input type="email" class="form__input" placeholder="Email" required>
+            </div>
+            <div class="form__group">
+              <textarea class="form__textarea" placeholder="Message" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+              <span class="btn__text">Send Message</span>
+              <span class="btn__hover">Send Message <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+              <span class="btn__dot"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container--mid">
+      <div class="reveal">
+        <h2 class="heading-subsection" style="margin-bottom: var(--space-4);">Frequently Asked Questions</h2>
+      </div>
+      <ul class="faq-list">
+        <li class="faq-item reveal">
+          <button class="faq-item__trigger">
+            <span>What roles am I looking for?</span>
+            <span class="faq-item__icon">▾</span>
+          </button>
+          <div class="faq-item__content">
+            <p class="faq-item__text">I'm targeting program management, AI-enabled operations, and agentic workflow builder roles. I'm most interested in positions where I can combine program thinking with hands-on AI tooling — translating business needs into practical systems. Product-adjacent and customer success/enablement roles are also a strong fit.</p>
+          </div>
+        </li>
+        <li class="faq-item reveal" data-delay="50">
+          <button class="faq-item__trigger">
+            <span>Work style & availability</span>
+            <span class="faq-item__icon">▾</span>
+          </button>
+          <div class="faq-item__content">
+            <p class="faq-item__text">I'm based in Bothell, WA and open to remote, hybrid, or on-site opportunities in the Seattle area. I thrive in collaborative environments where I can work across teams — engineering, product, sales, and customers. Available for full-time roles and open to contract/consulting for the right project.</p>
+          </div>
+        </li>
+        <li class="faq-item reveal" data-delay="100">
+          <button class="faq-item__trigger">
+            <span>Technical approach</span>
+            <span class="faq-item__icon">▾</span>
+          </button>
+          <div class="faq-item__content">
+            <p class="faq-item__text">I come from a business and operations background, not a CS degree. My technical skills are growing intentionally — I build with Python, LangChain, and modern AI APIs, and I think about systems in terms of workflows, stakeholders, and outcomes. I've evaluated LLM outputs professionally at Scale AI and I'm building agentic tools to deepen that capability.</p>
+          </div>
+        </li>
+        <li class="faq-item reveal" data-delay="150">
+          <button class="faq-item__trigger">
+            <span>Collaboration style</span>
+            <span class="faq-item__icon">▾</span>
+          </button>
+          <div class="faq-item__content">
+            <p class="faq-item__text">I lead with clarity and structure. I ask questions, document decisions, and keep everyone aligned. I'm comfortable managing up, down, and across — whether that's updating executives, coordinating with engineers, or interfacing directly with customers.</p>
+          </div>
+        </li>
+        <li class="faq-item reveal" data-delay="200">
+          <button class="faq-item__trigger">
+            <span>What sets you apart?</span>
+            <span class="faq-item__icon">▾</span>
+          </button>
+          <div class="faq-item__content">
+            <p class="faq-item__text">The combination: real operational and client-facing experience, formal analytics training from Hopkins, hands-on LLM evaluation experience, and a growing portfolio of agentic projects. I'm not just talking about AI — I'm building with it, and I understand the business context around it.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="container">
+    <div class="footer">
+      <span class="footer__credits">&copy; 2025 Tony Mikityuk</span>
+      <ul class="footer__links">
+        <li><a href="mailto:mikityuk.tony@gmail.com">Email</a></li>
+        <li><a href="https://linkedin.com/in/tony-mikityuk" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <div class="chatbot-panel" id="chatbot">
+    <div class="chatbot-panel__body">
+      <div class="chatbot-panel__header">
+        <div>
+          <div class="chatbot-panel__title">AI Assistant</div>
+          <div class="chatbot-panel__subtitle">Ask me about Tony</div>
+        </div>
+        <button class="chatbot-panel__close" onclick="toggleChat()">✕</button>
+      </div>
+      <div class="chatbot-panel__messages" id="chatMessages">
+        <div class="chat-msg chat-msg--assistant">Hi! I'm Tony's AI assistant. Ask me about his background, projects, or how he can help your team.</div>
+      </div>
+      <div class="chatbot-panel__form-wrap">
+        <div class="chatbot-panel__input-shell">
+          <div class="chatbot-panel__input-inner">
+            <form class="chatbot-panel__form" onsubmit="handleChat(event)">
+              <textarea class="chatbot-panel__input" id="chatInput" placeholder="Send a message..." rows="1" autocomplete="off"></textarea>
+              <button type="submit" class="chatbot-panel__send" id="chatSend">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="chatbot-panel__input-shadow"></div>
+      </div>
+    </div>
+  </div>
+  <button class="chatbot-toggle" onclick="toggleChat()" aria-label="Chat">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
