@@ -1568,6 +1568,12 @@ img {
   .skills-grid {
     grid-template-columns: 1fr;
   }
+  .badge {
+    white-space: normal;
+  }
+  .skill-group--emphasis .skill-group__tags {
+    grid-template-columns: 1fr 1fr !important;
+  }
   .project-grid {
     grid-template-columns: 1fr;
   }
