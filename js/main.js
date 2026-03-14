@@ -1,5 +1,5 @@
 // ============================================
-// MAIN JS — Tony Mikityuk Personal Brand Site
+// MAIN JS - Tony Mikityuk Personal Brand Site
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -163,7 +163,7 @@ function handleChat(e) {
       projects: "Tony's projects focus on agentic systems and workflow automation. His featured work includes a multi-agent research assistant and customer success automation tools. Check out the Agentic Projects page for details!",
       roles: "Tony is targeting Program Manager, Customer Success, or AI/ML Program roles where he can bridge technical and business stakeholders.",
       contact: "You can reach Tony at mikityuk.tony@gmail.com or connect on LinkedIn. He's also available for a quick call to discuss opportunities.",
-      skills: "Tony's skill set spans program leadership, stakeholder management, GTM experience, analytics, and a growing focus on AI workflow and agentic tooling — including prompt engineering, model evaluation, and Python automation.",
+      skills: "Tony's skill set spans program leadership, stakeholder management, GTM experience, analytics, and a growing focus on AI workflow and agentic tooling, including prompt engineering, model evaluation, and Python automation.",
       default: "Great question! Tony brings program management expertise with hands-on AI engineering skills. He's particularly strong at coordinating complex initiatives and building practical AI solutions. Want to know about his experience, projects, or what roles he's looking for?"
     };
 

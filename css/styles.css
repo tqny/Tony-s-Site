@@ -1,5 +1,5 @@
 /* ============================================
-   GLOBAL STYLES — Tony Mikityuk Personal Brand Site
+   GLOBAL STYLES - Tony Mikityuk Personal Brand Site
    Merged: Editorial Dark Minimal + 21st.dev patterns
    ============================================ */
 
@@ -292,7 +292,7 @@ img {
   height: 100% !important;
 }
 
-/* Radial glow — soft centre light for depth */
+/* Radial glow - soft centre light for depth */
 .hero__glow {
   position: absolute;
   inset: 0;
@@ -377,7 +377,7 @@ img {
   z-index: 2;
 }
 
-/* 3D Robot container — overflow crop hides the bottom watermark */
+/* 3D Robot container - overflow crop hides the bottom watermark */
 .hero__robot {
   position: absolute;
   bottom: 6%;
@@ -461,7 +461,7 @@ img {
 }
 
 /* ==========================================
-   ABOUT — Mouse-tracking gradient glow
+   ABOUT - Mouse-tracking gradient glow
    ========================================== */
 
 .about-track {
@@ -482,7 +482,7 @@ img {
   z-index: 0;
   opacity: 0;
   transition: opacity 0.4s ease;
-  /* Default position — centred, invisible until JS kicks in */
+  /* Default position - centred, invisible until JS kicks in */
   background: radial-gradient(
     300px circle at 50% 50%,
     rgba(255, 255, 255, 0.09) 0%,
@@ -502,7 +502,7 @@ img {
 }
 
 /* ==========================================
-   EDUCATION — JHU Shield Watermark
+   EDUCATION - JHU Shield Watermark
    ========================================== */
 
 .edu-shield {
@@ -518,7 +518,7 @@ img {
 }
 
 /* ==========================================
-   BUTTONS — Interactive Hover (slide + expanding dot)
+   BUTTONS - Interactive Hover (slide + expanding dot)
    ========================================== */
 
 .btn {
@@ -538,7 +538,7 @@ img {
   min-width: 140px;
 }
 
-/* Default text — slides out on hover */
+/* Default text - slides out on hover */
 .btn__text {
   display: inline-block;
   transform: translateX(2px);
@@ -550,7 +550,7 @@ img {
   opacity: 0;
 }
 
-/* Hover text + arrow — slides in on hover */
+/* Hover text + arrow - slides in on hover */
 .btn__hover {
   position: absolute;
   top: 0;
@@ -629,7 +629,7 @@ img {
   color: var(--bg-primary);
 }
 
-/* ---- Ghost variant (no bg, just text — simpler hover) ---- */
+/* ---- Ghost variant (no bg, just text - simpler hover) ---- */
 .btn--ghost {
   background: transparent;
   color: rgba(255, 255, 255, 0.7);
@@ -1036,7 +1036,7 @@ img {
 }
 
 /* ==========================================
-   PROJECT DETAIL — process, gallery, quote
+   PROJECT DETAIL - process, gallery, quote
    ========================================== */
 
 .project-meta-bar {
@@ -1121,7 +1121,7 @@ img {
 }
 
 /* ==========================================
-   CHATBOT WIDGET — Gradient AI Chat Style
+   CHATBOT WIDGET - Gradient AI Chat Style
    Multi-layer conic gradient border adapted
    for editorial dark minimal theme
    ========================================== */
@@ -1194,7 +1194,7 @@ img {
   transform: translateY(0) scale(1);
 }
 
-/* Inner shell — the actual dark background */
+/* Inner shell - the actual dark background */
 .chatbot-panel__body {
   flex: 1;
   display: flex;
@@ -1330,7 +1330,7 @@ img {
   border-bottom-right-radius: 4px;
 }
 
-/* --- Input area — Gradient border treatment --- */
+/* --- Input area - Gradient border treatment --- */
 .chatbot-panel__form-wrap {
   padding: 16px 16px 16px;
   position: relative;
