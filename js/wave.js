@@ -1,7 +1,7 @@
 // ============================================
-// WAVE ANIMATION — Shared Three.js dotted surface
+// WAVE ANIMATION - Shared Three.js dotted surface
 // Used on: index.html (hero), project-site.html (project header)
-// Params must stay synced — see AGENTS.md
+// Params must stay synced - see AGENTS.md
 // ============================================
 
 function initWaveAnimation(config) {
