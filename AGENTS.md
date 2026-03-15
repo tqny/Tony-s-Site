@@ -29,6 +29,7 @@ Static HTML/CSS/JS — no build tools, no frameworks, no package.json.
 index.html          → Home (hero, about, skills, education, experience, contact/FAQ)
 projects.html       → Agentic Projects listing
 project-detail.html → Generic project detail template (placeholder)
+strange-atlas.html  → Detail page for the Strange Atlas project
 project-site.html   → Detail page for this site itself
 hire-me.html        → Standalone Contact & FAQ page
 
@@ -82,7 +83,8 @@ These values live in `js/wave.js`. Each page calls `initWaveAnimation()` with pa
 
 ## Current State
 
-- Projects 01, 02, 04, 05 are placeholders with generic content pointing to `project-detail.html`. Do not fill these with fabricated content — they will be replaced with real projects.
-- Project 03 (Personal Brand Site) is the only fully built-out project detail page (`project-site.html`).
+- Projects 02, 04, 05 are placeholders with generic content pointing to `project-detail.html`. Do not fill these with fabricated content - they will be replaced with real projects.
+- Project 01 (Strange Atlas) has a dedicated detail page (`strange-atlas.html`).
+- Project 03 (Personal Brand Site) has a dedicated detail page (`project-site.html`).
 - The contact form (`index.html`, `hire-me.html`) has no backend — `action="#"` is intentional for v1.
 - GitHub Pages deploys from `main` branch.
