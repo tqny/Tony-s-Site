@@ -80,23 +80,83 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ---- Chatbot ----
+
+// Chat API config
+var CHAT_API_URL = 'https://tonys-site-proxy.jt1135.workers.dev';
+var CHAT_MODEL = 'kimi-k2-0711-preview';
+var CHAT_MAX_TOKENS = 512;
+var CHAT_SESSION_LIMIT = 30;
+var chatMessageCount = 0;
+var chatHistory = [];
+var chatIsLoading = false;
+
+// System prompt: warm, professional, informed advocate for Tony
+var CHAT_SYSTEM_PROMPT = [
+  'You are Tony Mikityuk\'s AI assistant, embedded on his personal portfolio site.',
+  'Your job is to help visitors learn about Tony and to advocate for him as a candidate.',
+  '',
+  'TONE: Warm, professional, and confident. You genuinely believe Tony is a strong hire.',
+  'Be conversational but polished. Speak like a well-informed colleague recommending someone they respect.',
+  'When relevant, highlight what makes Tony stand out and why a team would benefit from bringing him on.',
+  'Do not be pushy or over-the-top. Be credible and specific.',
+  '',
+  'TONY\'S BACKGROUND:',
+  '- Program Manager and customer-facing professional with experience across SaaS sales, healthcare, and AI-enabled operations.',
+  '- MS in Marketing Analytics from Johns Hopkins University (Dean\'s Scholarship, 3.8 GPA, 2020-2023).',
+  '- Based in Bothell, WA. Open to remote, hybrid, or on-site in Seattle area.',
+  '- Open to full-time roles and contract/consulting for the right project.',
+  '',
+  'EXPERIENCE:',
+  '- AI Model Training (Outlier / Scale AI, Nov 2023 - Sep 2024): Evaluated AI-generated responses for accuracy and reasoning quality. Created domain-specific prompts for GTM strategy and executive communication. Ranked model outputs and annotated reasoning errors for RLHF workflows.',
+  '- Territory Sales Manager (Allegiance Medical, Jul 2021 - Sep 2023): Owned $3-5M annual territory in spine & pain management across WA and OR. Lead technical specialist for 100+ procedures/year. Delivered 50+ physician demos.',
+  '- Product Consultant (Monday.com, Jan 2020 - Mar 2021): Converted inbound free-trial users into 25-35 SQLs/month. Drove 35-45% PQL-to-opportunity conversion. Sourced $1.5M+ in annualized pipeline.',
+  '',
+  'SKILLS:',
+  '- Program/project leadership, cross-functional coordination, stakeholder management, risk mitigation.',
+  '- Customer-facing: client communication, requirement gathering, expectation alignment, relationship building.',
+  '- GTM: solution positioning, discovery, objection handling, territory management.',
+  '- Analytics: data analysis, predictive modeling, process optimization, metrics definition.',
+  '- AI/Agentic tooling: Documentation-Driven Development, Three.js & Spline 3D, model evaluation & RLHF, React/TypeScript/Tailwind, CSS design systems, Claude Code & Cowork, modular architecture planning, AI-assisted iterative development.',
+  '',
+  'TARGET ROLES: Program management, customer success, AI-enabled operations, agentic workflow building. Especially roles that combine program thinking with hands-on AI tooling.',
+  '',
+  'PORTFOLIO PROJECTS:',
+  '1. Strange Atlas - Interactive 3D globe visualizing ~99,000 real-world mysterious phenomena across 10 categories. Built with Three.js, vanilla JS, Cloudflare Workers, and Kimi AI chat. Live at tqny.github.io/strange-atlas/. Demonstrates data visualization skills, API integration, and the ability to ship a complex interactive product.',
+  '2. Brand Protection Control Center - Domain threat intelligence dashboard with live scanning, multi-source enrichment, AI triage, and full case-to-enforcement workflow. Built with React 19, TypeScript, Tailwind CSS, shadcn/ui, Recharts. Live at tqny.github.io/domain-security-project/. Shows enterprise-grade UI thinking and security/ops domain knowledge.',
+  '3. This Personal Brand Site - Built from scratch with AI-assisted development. No templates, no frameworks. Three.js particle hero, Spline 3D robot, CSS design token system, interactive button hovers, scroll reveals. The site itself is a portfolio piece demonstrating the AI-assisted workflow Tony claims to be skilled at.',
+  '',
+  'WHY TONY STANDS OUT:',
+  '- Rare blend of business instincts (PM, sales, customer success) with growing technical execution.',
+  '- Actually ships: every project is live, publicly deployed, with clean code and real content.',
+  '- AI-native workflow: doesn\'t just talk about AI, builds with it daily using Claude Code, prompt engineering, and model evaluation.',
+  '- Strong communicator who can work across engineering, product, sales, and customer teams.',
+  '- Johns Hopkins MS brings analytical rigor to everything he does.',
+  '',
+  'CONTACT: mikityuk.tony@gmail.com | LinkedIn: linkedin.com/in/tonymikityuk',
+  '',
+  'GUIDELINES:',
+  '- Keep responses short and punchy. 1-2 sentences is ideal, 3 max. No long paragraphs. Get to the point fast.',
+  '- If asked about something you don\'t know about Tony, say so honestly rather than making things up.',
+  '- If someone asks about hiring or roles, be enthusiastic but professional. Highlight relevant experience.',
+  '- You can suggest visitors check out specific projects, download the resume, or reach out via email.',
+  '- If someone seems like a recruiter or hiring manager, be especially helpful and proactive about connecting them with Tony.'
+].join('\n');
+
 function toggleChat() {
-  const panel = document.getElementById('chatbot');
+  var panel = document.getElementById('chatbot');
   if (!panel) return;
-  const isActive = panel.classList.contains('active');
+  var isActive = panel.classList.contains('active');
   if (isActive) {
-    // Animate out
     panel.style.opacity = '0';
     panel.style.transform = 'translateY(16px) scale(0.97)';
-    setTimeout(() => {
+    setTimeout(function() {
       panel.classList.remove('active');
       panel.style.opacity = '';
       panel.style.transform = '';
     }, 300);
   } else {
     panel.classList.add('active');
-    // Focus the input after opening
-    setTimeout(() => {
+    setTimeout(function() {
       var input = document.getElementById('chatInput');
       if (input) input.focus();
     }, 350);
@@ -125,7 +185,6 @@ function toggleChat() {
     updateSendState();
   });
 
-  // Enter to send, Shift+Enter for newline
   input.addEventListener('keydown', function(e) {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
@@ -137,14 +196,91 @@ function toggleChat() {
   });
 })();
 
+// Example question chips
+(function() {
+  var messages = document.getElementById('chatMessages');
+  if (!messages) return;
+
+  var chips = [
+    'What roles is Tony looking for?',
+    'Tell me about his projects',
+    'What makes Tony stand out?'
+  ];
+
+  var chipWrap = document.createElement('div');
+  chipWrap.className = 'chat-chips';
+  chips.forEach(function(text) {
+    var chip = document.createElement('button');
+    chip.className = 'chat-chip';
+    chip.textContent = text;
+    chip.addEventListener('click', function() {
+      var input = document.getElementById('chatInput');
+      if (input) {
+        input.value = text;
+        input.dispatchEvent(new Event('input'));
+      }
+      var form = input ? input.closest('form') : null;
+      if (form) form.dispatchEvent(new Event('submit', { cancelable: true }));
+    });
+    chipWrap.appendChild(chip);
+  });
+  messages.appendChild(chipWrap);
+})();
+
+// Typing animation: reveal text character by character
+function typeMessage(element, text, callback) {
+  var i = 0;
+  var speed = 12;
+  var messages = document.getElementById('chatMessages');
+
+  function tick() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      if (messages) messages.scrollTop = messages.scrollHeight;
+      setTimeout(tick, speed);
+    } else if (callback) {
+      callback();
+    }
+  }
+  tick();
+}
+
+// Show typing indicator
+function showTypingIndicator() {
+  var messages = document.getElementById('chatMessages');
+  if (!messages) return null;
+  var indicator = document.createElement('div');
+  indicator.className = 'chat-msg chat-msg--assistant chat-typing';
+  indicator.innerHTML = '<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>';
+  messages.appendChild(indicator);
+  messages.scrollTop = messages.scrollHeight;
+  return indicator;
+}
+
 function handleChat(e) {
   e.preventDefault();
   var input = document.getElementById('chatInput');
   var messages = document.getElementById('chatMessages');
   var sendBtn = document.getElementById('chatSend');
-  if (!input || !messages || !input.value.trim()) return;
+  if (!input || !messages || !input.value.trim() || chatIsLoading) return;
 
   var userText = input.value.trim();
+
+  // Session limit
+  chatMessageCount++;
+  if (chatMessageCount > CHAT_SESSION_LIMIT) {
+    var limitMsg = document.createElement('div');
+    limitMsg.className = 'chat-msg chat-msg--assistant';
+    limitMsg.textContent = 'You\'ve reached the session limit. Feel free to reach out directly at mikityuk.tony@gmail.com!';
+    messages.appendChild(limitMsg);
+    messages.scrollTop = messages.scrollHeight;
+    return;
+  }
+
+  // Remove chips on first message
+  var chips = messages.querySelector('.chat-chips');
+  if (chips) chips.remove();
 
   // Add user message
   var userMsg = document.createElement('div');
@@ -156,29 +292,55 @@ function handleChat(e) {
   if (sendBtn) sendBtn.classList.remove('has-text');
   messages.scrollTop = messages.scrollHeight;
 
-  // Generate response
-  setTimeout(function() {
-    var responses = {
-      background: "Tony has a unique blend of program management, customer success, and AI engineering. He holds an MS in Marketing Analytics from Johns Hopkins and has worked across SaaS, healthcare tech, and AI model training at Scale AI.",
-      projects: "Tony's projects focus on agentic systems and workflow automation. His featured work includes a multi-agent research assistant and customer success automation tools. Check out the Agentic Projects page for details!",
-      roles: "Tony is targeting Program Manager, Customer Success, or AI/ML Program roles where he can bridge technical and business stakeholders.",
-      contact: "You can reach Tony at mikityuk.tony@gmail.com or connect on LinkedIn. He's also available for a quick call to discuss opportunities.",
-      skills: "Tony's skill set spans program leadership, stakeholder management, GTM experience, analytics, and a growing focus on AI workflow and agentic tooling, including prompt engineering, model evaluation, and Python automation.",
-      default: "Great question! Tony brings program management expertise with hands-on AI engineering skills. He's particularly strong at coordinating complex initiatives and building practical AI solutions. Want to know about his experience, projects, or what roles he's looking for?"
-    };
+  // Track conversation history
+  chatHistory.push({ role: 'user', content: userText });
 
-    var lower = userText.toLowerCase();
-    var response = responses.default;
-    if (lower.includes('background') || lower.includes('experience') || lower.includes('who')) response = responses.background;
-    else if (lower.includes('project') || lower.includes('build')) response = responses.projects;
-    else if (lower.includes('role') || lower.includes('looking') || lower.includes('job')) response = responses.roles;
-    else if (lower.includes('contact') || lower.includes('reach') || lower.includes('email')) response = responses.contact;
-    else if (lower.includes('skill') || lower.includes('tech') || lower.includes('stack')) response = responses.skills;
+  // Show typing indicator
+  chatIsLoading = true;
+  var typingIndicator = showTypingIndicator();
+
+  // Build messages payload
+  var payload = {
+    model: CHAT_MODEL,
+    max_tokens: CHAT_MAX_TOKENS,
+    messages: [
+      { role: 'system', content: CHAT_SYSTEM_PROMPT }
+    ].concat(chatHistory.slice(-10)) // keep last 10 messages for context
+  };
+
+  fetch(CHAT_API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(data) {
+    if (typingIndicator) typingIndicator.remove();
+
+    var responseText = 'Sorry, I had trouble with that. You can reach Tony directly at mikityuk.tony@gmail.com.';
+    if (data.choices && data.choices[0] && data.choices[0].message) {
+      responseText = data.choices[0].message.content;
+    } else if (data.error) {
+      responseText = data.error.message || responseText;
+    }
+
+    chatHistory.push({ role: 'assistant', content: responseText });
 
     var botMsg = document.createElement('div');
     botMsg.className = 'chat-msg chat-msg--assistant';
-    botMsg.textContent = response;
     messages.appendChild(botMsg);
+    typeMessage(botMsg, responseText, function() {
+      chatIsLoading = false;
+    });
+  })
+  .catch(function() {
+    if (typingIndicator) typingIndicator.remove();
+    chatIsLoading = false;
+
+    var errMsg = document.createElement('div');
+    errMsg.className = 'chat-msg chat-msg--assistant';
+    errMsg.textContent = 'Connection issue. You can reach Tony directly at mikityuk.tony@gmail.com.';
+    messages.appendChild(errMsg);
     messages.scrollTop = messages.scrollHeight;
-  }, 600);
+  });
 }
