@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Strange Atlas | Tony Mikityuk</title>
-  <meta name="description" content="An interactive 3D globe visualizing ~99,000 real-world mysterious phenomena across 10 categories, built with Three.js and vanilla JavaScript.">
+  <title>Brand Protection Control Center | Tony Mikityuk</title>
+  <meta name="description" content="A domain threat intelligence dashboard that scans for suspicious domains, enriches with public threat feeds, and routes findings through a full case management workflow.">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -34,23 +34,23 @@
         <a href="projects.html" style="display: inline-flex; align-items: center; gap: 4px; font-size: var(--text-sm); color: rgba(255,255,255,0.5); margin-bottom: var(--space-6);">← Back to Projects</a>
 
         <div class="project-meta-bar">
-          <span class="badge">Data Visualization</span>
+          <span class="badge">Brand Protection</span>
           <span class="text-small">2026</span>
           <span class="project-meta-bar__separator"></span>
-          <span class="text-small">Three.js, Vanilla JS, Cloudflare Workers</span>
+          <span class="text-small">React 19, TypeScript, Tailwind CSS, shadcn/ui, Recharts</span>
           <span class="project-meta-bar__separator"></span>
           <span class="badge badge--filled">Live</span>
         </div>
 
-        <h1 class="heading-display" style="margin-bottom: var(--space-6); line-height: 1.05;">Strange Atlas</h1>
+        <h1 class="heading-display" style="margin-bottom: var(--space-6); line-height: 1.05;">Brand Protection Control Center</h1>
 
         <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
-          <a href="https://tqny.github.io/strange-atlas/" target="_blank" class="btn btn--primary">
+          <a href="https://tqny.github.io/domain-security-project/" target="_blank" class="btn btn--primary">
             <span class="btn__text">View Live Site</span>
             <span class="btn__hover">View Live Site <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
             <span class="btn__dot"></span>
           </a>
-          <a href="https://github.com/tqny/strange-atlas" target="_blank" class="btn btn--outline">
+          <a href="https://github.com/tqny/domain-security-project" target="_blank" class="btn btn--outline">
             <span class="btn__text">View Code</span>
             <span class="btn__hover">View Code <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
             <span class="btn__dot"></span>
@@ -60,9 +60,10 @@
     </div>
   </section>
 
-  <!-- Hero Visual - Spinning globe -->
-  <section style="width: 100%; padding: 0; margin-top: var(--space-8);">
-    <div id="globeHero" style="width: 100%; aspect-ratio: 16 / 9; max-height: 480px; background: #0A0A0A; position: relative; overflow: hidden;">
+  <!-- Hero Image -->
+  <section class="container" style="max-width: 1000px;">
+    <div class="hero-image reveal">
+      <span class="hero-image__placeholder">Dashboard Screenshot</span>
     </div>
   </section>
 
@@ -73,12 +74,12 @@
     </div>
     <div class="container" style="max-width: 1400px;">
       <div class="image-gallery image-gallery--2col reveal">
-        <div class="gallery-image" style="background: #000;"><img src="images/sa-gallery-globe.png" alt="Strange Atlas globe overview on laptop" style="width: 100%; height: 100%; object-fit: cover;"></div>
-        <div class="gallery-image" style="background: #000;"><img src="images/sa-gallery-full.png" alt="Strange Atlas full view" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <div class="gallery-image"><span class="gallery-image__placeholder">Live Scan View</span></div>
+        <div class="gallery-image"><span class="gallery-image__placeholder">Operations Dashboard</span></div>
       </div>
       <div class="image-gallery image-gallery--2col reveal" data-delay="100">
-        <div class="gallery-image" style="background: #000;"><img src="images/sa-gallery-mobile.png" alt="Strange Atlas on mobile" style="width: 100%; height: 100%; object-fit: cover;"></div>
-        <div class="gallery-image" style="background: #000;"><img src="images/sa-gallery-about.png" alt="Strange Atlas about page" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <div class="gallery-image"><span class="gallery-image__placeholder">Case Investigation</span></div>
+        <div class="gallery-image"><span class="gallery-image__placeholder">Enforcement Tracker</span></div>
       </div>
     </div>
   </section>
@@ -92,26 +93,33 @@
 
       <div style="display: flex; flex-direction: column; gap: var(--space-5);">
         <div class="bl-block reveal">
-          <h3 class="bl-block__title" style="font-size: var(--text-xl);">The Vision</h3>
-          <p class="bl-block__text">Strange Atlas started because I genuinely wanted to build it. I've always been drawn to the unexplained - UFO sightings, shipwrecks, haunted places - and I wanted to see all of it at once, on a globe I could spin and explore. Not pins on a flat map, but a living, glowing landscape you could get lost in. The goal was something closer to a National Geographic spread than a dashboard - editorial, visual, and fun to just sit with.</p>
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">The Problem</h3>
+          <p class="bl-block__text">Brand protection teams detect thousands of suspicious domains monthly  - typosquats, homoglyphs, keyword injections  - but the workflow from detection to enforcement is fragmented across spreadsheets, email threads, and vendor portals. There's no single pane of glass connecting a scan result to a takedown request. This project builds that pane of glass.</p>
         </div>
         <div class="bl-block reveal" data-delay="50">
-          <h3 class="bl-block__title" style="font-size: var(--text-xl);">Data Pipeline</h3>
-          <p class="bl-block__text">The project processes 354,770 records from the Strange Places v5.2 dataset (CC BY 4.0), filtering to ~99,000 high-quality geocoded points across 10 categories: UFO sightings, Bigfoot encounters, haunted places, volcanoes, shipwrecks, and more. Coordinates are validated, duplicates removed, and geographic overlaps resolved using Haversine distance calculations.</p>
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">Scan & Enrichment Pipeline</h3>
+          <p class="bl-block__text">Enter any brand domain and the engine generates 20+ suspicious variants using 8 techniques (homoglyphs, typosquatting, TLD swaps, keyword injection, character deletion, transposition). Each variant is probed against Google DNS-over-HTTPS, then enriched with RDAP registrant data, Certificate Transparency logs via crt.sh, Spamhaus blocklist status, URLhaus malware checks, and AlienVault OTX threat intelligence. All real APIs, no mocked data.</p>
         </div>
         <div class="bl-block reveal" data-delay="100">
-          <h3 class="bl-block__title" style="font-size: var(--text-xl);">Technical Architecture</h3>
-          <p class="bl-block__text">Built on Three.js r128 with a custom Fresnel-shaded globe, dot-matrix continents rendered from TopoJSON, and category-specific neon glow shaders. No framework, just vanilla JavaScript controlling a BufferGeometry of ~99K points. A Cloudflare Worker proxies "Ask Atlas" AI chat requests to Kimi 2.5, keeping API keys server-side.</p>
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">Risk Scoring & AI Triage</h3>
+          <p class="bl-block__text">A compound scoring model weighs DNS resolution (40), certificate recency (20), registration age (20), keyword match (25), homoglyph similarity (15), and registrant trust signals (10) to classify each domain as Low, Medium, or High risk. The top 5 threats surface in an interactive AI Triage card with signal-aware analyst summaries and recommended enforcement actions  - agree to auto-escalate, or flag for manual investigation.</p>
         </div>
         <div class="bl-block reveal" data-delay="150">
-          <h3 class="bl-block__title" style="font-size: var(--text-xl);">Design Philosophy</h3>
-          <p class="bl-block__text">The approach was "editorial, not analytic." Light backgrounds and generous negative space replace the typical dark-mode data dashboard aesthetic. A single typeface (Inter) maintains typographic discipline. Category toggles use neon glow effects as functional UI, not decoration. Every visual choice serves the narrative: these are real places where strange things were reported.</p>
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">Full Workflow: Scan to Resolution</h3>
+          <p class="bl-block__text">One scan populates the entire application: cases are created in the queue, domains are registered in the portfolio, evidence is attached (DNS records, WHOIS snapshots, certificate logs), and enforcement actions are routed to 4 vendor partners with SLA tracking. The workflow mirrors how enterprise brand protection programs actually operate  - detection, triage, investigation, enforcement, resolution  - with every entity cross-linked and navigable.</p>
         </div>
         <div class="bl-block reveal" data-delay="200">
           <h3 class="bl-block__title" style="font-size: var(--text-xl);">What This Demonstrates</h3>
-          <p class="bl-block__text">End-to-end product execution: data engineering, 3D graphics programming, shader authoring, API architecture, UX design, and AI integration, all coordinated through AI-assisted development with Claude. The project shows how a single builder can ship a polished, data-rich interactive experience by combining domain judgment with modern AI tooling.</p>
+          <p class="bl-block__text">End-to-end product thinking applied to a security operations domain: scoping a 7-page React application with real API integrations, designing a compound data model with cross-entity relationships, building a custom design system (Torch Dark Gold), and shipping a production deployment to GitHub Pages  - all through AI-assisted development with Claude Code. The project shows how someone with program management instincts approaches technical builds: workflow-first, data-driven, and systematically organized.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="container" style="max-width: 1000px;">
+    <div class="quote-block reveal">
+      <p class="quote-block__text">"The best security tools don't just find threats  - they turn detection into action. This dashboard bridges the gap from scan result to takedown request."</p>
     </div>
   </section>
 
@@ -120,15 +128,15 @@
     <div class="container" style="max-width: 1000px;">
       <h2 class="heading-section reveal" style="margin-bottom: var(--space-8);">Related Projects</h2>
       <div class="project-grid reveal">
-        <a href="domain-security.html" class="project-card">
-          <div class="project-card__image"><span class="project-card__placeholder">Sentinel</span></div>
+        <a href="strange-atlas.html" class="project-card">
+          <div class="project-card__image" style="background: #000;"><img src="images/sa-card-globe.png" alt="Strange Atlas globe" style="width: 100%; height: 100%; object-fit: cover;"></div>
           <div class="project-card__body">
             <div class="project-card__badges">
-              <span class="badge">Brand Protection</span>
+              <span class="badge">Data Visualization</span>
               <span class="text-small">2026</span>
             </div>
-            <h3 class="heading-card">Brand Protection Control Center</h3>
-            <p class="project-card__desc">Domain threat intelligence dashboard with live scanning and AI triage.</p>
+            <h3 class="heading-card">Strange Atlas</h3>
+            <p class="project-card__desc">Interactive 3D globe visualizing ~99,000 real-world mysterious phenomena across 10 categories.</p>
           </div>
         </a>
         <a href="project-site.html" class="project-card">
@@ -201,18 +209,6 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
   </button>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/globe.js"></script>
-  <script>
-    initGlobeAnimation({
-      containerId: 'globeHero',
-      cameraZ: 500,
-      pointCount: 5000,
-      radius: 180,
-      dotSize: 2.5,
-      rotationSpeed: 0.002
-    });
-  </script>
 </body>
 </html>
