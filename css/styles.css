@@ -1678,4 +1678,8 @@ img {
     transform: none;
     transition: none;
   }
+  .scroll-card__frame,
+  .scroll-card__header {
+    transform: none !important;
+  }
 }
