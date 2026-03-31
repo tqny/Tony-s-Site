@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Barter | Tony Mikityuk</title>
+  <meta name="description" content="An AI-assisted customer success workspace that helps CSMs manage vendor portfolios, diagnose performance issues, and generate retailer-ready quarterly growth plans.">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Tony Mikityuk</a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="projects.html" class="nav__link nav__link--active">Projects</a></li>
+        <li><a href="hire-me.html" class="nav__link">Contact & FAQ</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav__overlay">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="hire-me.html">Contact & FAQ</a>
+  </div>
+
+  <!-- Project Header -->
+  <section style="padding-top: calc(64px + var(--space-8));">
+    <div class="container" style="max-width: 1000px;">
+      <div class="reveal">
+        <a href="projects.html" style="display: inline-flex; align-items: center; gap: 4px; font-size: var(--text-sm); color: rgba(255,255,255,0.5); margin-bottom: var(--space-6);">← Back to Projects</a>
+
+        <div class="project-meta-bar">
+          <span class="badge">Customer Success</span>
+          <span class="text-small">2026</span>
+          <span class="project-meta-bar__separator"></span>
+          <span class="text-small">React 19, TypeScript, Tailwind CSS 4, shadcn/ui, Recharts, Framer Motion</span>
+          <span class="project-meta-bar__separator"></span>
+          <span class="badge badge--filled">Live</span>
+        </div>
+
+        <h1 class="heading-display" style="margin-bottom: var(--space-6); line-height: 1.05;">The Barter</h1>
+
+        <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+          <a href="https://tqny.github.io/the-barter/" target="_blank" class="btn btn--primary">
+            <span class="btn__text">View Live Site</span>
+            <span class="btn__hover">View Live Site <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
+            <span class="btn__dot"></span>
+          </a>
+          <a href="https://github.com/tqny/the-barter" target="_blank" class="btn btn--outline">
+            <span class="btn__text">View Code</span>
+            <span class="btn__hover">View Code <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
+            <span class="btn__dot"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Image -->
+  <section class="container" style="max-width: 1000px;">
+    <div class="hero-image reveal" style="background: #000; position: relative;">
+      <img src="images/tb-card-hero.png" alt="The Barter - Vendor Growth OS dashboard" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, #000 100%); pointer-events: none;"></div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section style="padding-top: var(--space-8); padding-bottom: var(--space-6);">
+    <div class="container" style="max-width: 1000px;">
+      <h2 class="heading-section reveal" style="margin-bottom: var(--space-8);">Gallery</h2>
+    </div>
+    <div class="container" style="max-width: 1400px;">
+      <div class="image-gallery image-gallery--2col reveal">
+        <div class="gallery-image" style="background: #000;"><img src="images/tb-gallery-overview.png" alt="The Barter - Executive Overview" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <div class="gallery-image" style="background: #000;"><img src="images/tb-gallery-diagnostics.png" alt="The Barter - Catalog & Diagnostics" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      </div>
+      <div class="image-gallery image-gallery--2col reveal" data-delay="100">
+        <div class="gallery-image" style="background: #000;"><img src="images/tb-gallery-growthplan.png" alt="The Barter - Growth Plan & QBR" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <div class="gallery-image" style="background: #000;"><img src="images/tb-gallery-simulation.png" alt="The Barter - Week 9 Simulation" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section" style="padding-top: var(--space-6); padding-bottom: var(--space-8);">
+    <div class="container" style="max-width: 1000px;">
+      <div class="reveal">
+        <h2 class="heading-section" style="margin-bottom: var(--space-4);">Process</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: var(--space-5);">
+        <div class="bl-block reveal">
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">The Real-World Workflow</h3>
+          <p class="bl-block__text">Customer Success Managers in retail and e-commerce manage portfolios of vendor accounts. Their daily work involves reviewing performance across catalog health, traffic, conversion, advertising efficiency, and supply chain, then translating those findings into action plans and business reviews. The Barter simulates this full cycle: Review, Diagnose, Prioritize, Communicate, Track Execution. Each page maps to a stage of that workflow, from an executive overview with animated scorecards and AI-generated summaries, to ASIN-level diagnostics with root cause evidence, to a growth plan studio with QBR talking points and vendor follow-up drafts.</p>
+        </div>
+        <div class="bl-block reveal" data-delay="50">
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">Diagnosis and Decision Support</h3>
+          <p class="bl-block__text">Most vendor management dashboards stop at data display. Charts and tables that leave the CSM to do all the interpretation. The Barter adds a decision-support layer: automated issue detection, root cause explanation, confidence scoring, and structured recommendations. The goal is not to replace the CSM's judgment, but to accelerate it. The tool surfaces what matters, explains why it matters, and suggests what to do about it, so the CSM can spend more time on vendor relationships and strategic decisions.</p>
+        </div>
+        <div class="bl-block reveal" data-delay="100">
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">The AI Layer</h3>
+          <p class="bl-block__text">The intelligence layer uses rule-based pattern matching against KPI thresholds and cross-metric correlations, combined with templated text generation parameterized by detected issues and vendor data. This is not freeform LLM generation. Every output is grounded in structured business logic. Three intelligence functions power the system: diagnostics that detect issues across conversion, inventory, returns, content quality, and ad efficiency; summaries that generate executive overviews and QBR talking points; and recommendations that map issues to grouped action plans by owner team. Every AI output includes a "How this was generated" explainer, making the system transparent and auditable.</p>
+        </div>
+        <div class="bl-block reveal" data-delay="150">
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">Interactive Data Exploration</h3>
+          <p class="bl-block__text">Every chart, metric, and finding is designed to respond to user interaction. The Week 9 Simulation lets you adjust all 8 vendor-level metrics via sliders, then run the full AI diagnostic pipeline against the hypothetical data. The entire dashboard re-renders with simulated results. Clickable key findings open contextual charts. Metric drill-downs show 4-week trends with delta analysis. Risk and opportunity popovers reveal affected ASINs, confidence levels, and the specific data points that triggered detection. Revenue donut segments, severity bars, and category breakdowns highlight in sync across widgets.</p>
+        </div>
+        <div class="bl-block reveal" data-delay="200">
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">What This Demonstrates</h3>
+          <p class="bl-block__text">The Barter demonstrates three things: deep domain expertise in how a retail CSM actually diagnoses vendor performance and correlates cross-metric signals; workflow design that supports judgment, prioritization, and communication through interactive exploration and scenario modeling; and practical AI judgment about where automation adds value in a customer-facing operational role, favoring grounded analysis over generative speculation, transparency through explainability, and clear boundaries between automation and human decision-making.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="container" style="max-width: 1000px;">
+    <div class="quote-block reveal">
+      <p class="quote-block__text">"The best CSM tools don't just display data -- they accelerate judgment. This workspace turns metric review into diagnosis, and diagnosis into action."</p>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="section" style="padding-top: var(--space-8);">
+    <div class="container" style="max-width: 1000px;">
+      <h2 class="heading-section reveal" style="margin-bottom: var(--space-8);">Related Projects</h2>
+      <div class="project-grid reveal">
+        <a href="strange-atlas.html" class="project-card">
+          <div class="project-card__image" style="background: #000;"><img src="images/sa-card-globe.png" alt="Strange Atlas globe" style="width: 100%; height: 100%; object-fit: cover;"></div>
+          <div class="project-card__body">
+            <div class="project-card__badges">
+              <span class="badge">Data Visualization</span>
+              <span class="text-small">2026</span>
+            </div>
+            <h3 class="heading-card">Strange Atlas</h3>
+            <p class="project-card__desc">Interactive 3D globe visualizing ~99,000 real-world mysterious phenomena across 10 categories.</p>
+          </div>
+        </a>
+        <a href="domain-security.html" class="project-card">
+          <div class="project-card__image"><img src="images/ds-card-sentinel.png" alt="Brand Protection Control Center" style="width: 100%; height: 100%; object-fit: cover;"></div>
+          <div class="project-card__body">
+            <div class="project-card__badges">
+              <span class="badge">Brand Protection</span>
+              <span class="text-small">2026</span>
+            </div>
+            <h3 class="heading-card">Brand Protection Control Center</h3>
+            <p class="project-card__desc">Domain threat intelligence dashboard with live scanning, multi-source enrichment, AI triage, and full case-to-enforcement workflow.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--alt" style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+    <div class="container--mid reveal">
+      <h3 class="heading-subsection" style="margin-bottom: var(--space-8);">Interested in working together?</h3>
+      <a href="hire-me.html" class="btn btn--primary">
+        <span class="btn__text">Get in Touch</span>
+        <span class="btn__hover">Get in Touch <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        <span class="btn__dot"></span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="container">
+    <div class="footer">
+      <span class="footer__credits">&copy; 2026 Tony Mikityuk</span>
+      <ul class="footer__links">
+        <li><a href="mailto:mikityuk.tony@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/tonymikityuk/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/tqny/Tony-s-Site" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <div class="chatbot-panel" id="chatbot">
+    <div class="chatbot-panel__body">
+      <div class="chatbot-panel__header">
+        <div>
+          <div class="chatbot-panel__title">AI Assistant</div>
+          <div class="chatbot-panel__subtitle">Ask me about Tony</div>
+        </div>
+        <button class="chatbot-panel__close" onclick="toggleChat()">✕</button>
+      </div>
+      <div class="chatbot-panel__messages" id="chatMessages">
+        <div class="chat-msg chat-msg--assistant">Hi! I'm Tony's AI assistant. Ask me about his background, projects, or how he can help your team.</div>
+      </div>
+      <div class="chatbot-panel__form-wrap">
+        <div class="chatbot-panel__input-shell">
+          <div class="chatbot-panel__input-inner">
+            <form class="chatbot-panel__form" onsubmit="handleChat(event)">
+              <textarea class="chatbot-panel__input" id="chatInput" placeholder="Send a message..." rows="1" autocomplete="off"></textarea>
+              <button type="submit" class="chatbot-panel__send" id="chatSend">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="chatbot-panel__input-shadow"></div>
+      </div>
+    </div>
+  </div>
+  <button class="chatbot-toggle" onclick="toggleChat()" aria-label="Chat">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

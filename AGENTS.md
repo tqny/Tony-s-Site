@@ -31,6 +31,7 @@ index.html          → Home (hero, about, skills, education, experience, contac
 projects.html       → Agentic Projects listing
 strange-atlas.html  → Detail page for the Strange Atlas project
 domain-security.html → Detail page for the Brand Protection Control Center
+the-barter.html     → Detail page for The Barter (Vendor Growth OS)
 project-site.html   → Detail page for this site itself
 project-detail.html → Generic project detail template (placeholder projects 04, 05)
 hire-me.html        → Standalone Contact & FAQ page
@@ -94,8 +95,8 @@ These values live in `js/wave.js`. Each page calls `initWaveAnimation()` with pa
 
 - **Design tokens** — these cascade everywhere. Changing a token affects the entire site.
 - **Three.js parameters** — must stay synced across pages (see above).
-- **Nav and footer markup** — duplicated across all 7 HTML pages. Changes must be applied to every file.
-- **Chatbot widget markup** — duplicated across all 7 HTML pages. Same rule applies.
+- **Nav and footer markup** — duplicated across all 8 HTML pages. Changes must be applied to every file.
+- **Chatbot widget markup** — duplicated across all 8 HTML pages. Same rule applies.
 - **Chatbot system prompt** — contains Tony's professional narrative. Changes affect how the bot represents him to visitors.
 - **Worker CORS origins** — must include all domains that will call the API (currently `tqny.github.io` + localhost variants).
 - **Spline 3D robot** — only on `index.html`. Do not add to other pages without considering load performance.
@@ -112,7 +113,8 @@ These values live in `js/wave.js`. Each page calls `initWaveAnimation()` with pa
 - Project 01 (Strange Atlas) has a dedicated detail page (`strange-atlas.html`) with real screenshots.
 - Project 02 (Brand Protection Control Center) has a dedicated detail page (`domain-security.html`) with real screenshots and card images.
 - Project 03 (Personal Brand Site) has a dedicated detail page (`project-site.html`) with real screenshots.
-- Projects 04, 05 are placeholders with "Coming Soon" labels, pointing to `project-detail.html`. Do not fill these with fabricated content.
+- Project 04 (The Barter) has a dedicated detail page (`the-barter.html`) with placeholder images (screenshots pending).
+- Project 05 is a placeholder with "Coming Soon" label, pointing to `project-detail.html`. Do not fill with fabricated content.
 - The contact form (`index.html`, `hire-me.html`) has no backend — `action="#"` is intentional.
 - The AI chatbot is live on all pages via Cloudflare Worker proxy.
 - GitHub Pages deploys from `main` branch.
