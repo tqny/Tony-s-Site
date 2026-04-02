@@ -113,8 +113,9 @@ These values live in `js/wave.js`. Each page calls `initWaveAnimation()` with pa
 - Project 01 (Strange Atlas) has a dedicated detail page (`strange-atlas.html`) with real screenshots.
 - Project 02 (Brand Protection Control Center) has a dedicated detail page (`domain-security.html`) with real screenshots and card images.
 - Project 03 (Personal Brand Site) has a dedicated detail page (`project-site.html`) with real screenshots.
-- Project 04 (The Barter) has a dedicated detail page (`the-barter.html`) with placeholder images (screenshots pending).
-- Project 05 is a placeholder with "Coming Soon" label, pointing to `project-detail.html`. Do not fill with fabricated content.
+- Project 04 (The Barter) has a dedicated detail page (`the-barter.html`) with real screenshots and card images. Promoted to Featured.
+- `project-detail.html` still exists as a generic template (currently titled "Multi-Agent Research Assistant") with placeholder gallery. No dedicated project wired to it yet.
+- All project cards and Related Projects sections have real images wired in.
 - The contact form (`index.html`, `hire-me.html`) has no backend — `action="#"` is intentional.
 - The AI chatbot is live on all pages via Cloudflare Worker proxy.
 - GitHub Pages deploys from `main` branch.
