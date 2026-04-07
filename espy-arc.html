@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espy Arc | Tony Mikityuk</title>
+  <meta name="description" content="A modern digital growth and business systems partner for small businesses. Two service pillars: Digital Presence & Growth + Business Systems & Insights.">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Tony Mikityuk</a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="projects.html" class="nav__link nav__link--active">Projects</a></li>
+        <li><a href="hire-me.html" class="nav__link">Contact & FAQ</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav__overlay">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="hire-me.html">Contact & FAQ</a>
+  </div>
+
+  <!-- Project Header -->
+  <section style="padding-top: calc(64px + var(--space-8));">
+    <div class="container" style="max-width: 1000px;">
+      <div class="reveal">
+        <a href="projects.html" style="display: inline-flex; align-items: center; gap: 4px; font-size: var(--text-sm); color: rgba(255,255,255,0.5); margin-bottom: var(--space-6);">← Back to Projects</a>
+
+        <div class="project-meta-bar" style="flex-wrap: wrap;">
+          <span class="badge">Digital Services</span>
+          <span class="text-small">2026</span>
+          <span class="project-meta-bar__separator"></span>
+          <span class="text-small" style="word-break: break-word;">Next.js 16, TypeScript, Tailwind CSS 4, Supabase, Formspree</span>
+          <span class="project-meta-bar__separator"></span>
+          <span class="badge badge--filled">Live</span>
+        </div>
+
+        <h1 class="heading-display" style="margin-bottom: var(--space-6); line-height: 1.05;">Espy Arc</h1>
+
+        <div style="display: flex; gap: var(--space-2); flex-wrap: wrap;">
+          <a href="https://espyarc.com" target="_blank" class="btn btn--primary">
+            <span class="btn__text">View Agency Site</span>
+            <span class="btn__hover">View Agency Site <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
+            <span class="btn__dot"></span>
+          </a>
+          <a href="https://leadpulse-one.vercel.app" target="_blank" class="btn btn--outline">
+            <span class="btn__text">View LeadPulse</span>
+            <span class="btn__hover">View LeadPulse <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
+            <span class="btn__dot"></span>
+          </a>
+          <a href="https://github.com/tqny/leadpulse" target="_blank" class="btn btn--outline">
+            <span class="btn__text">LeadPulse Code</span>
+            <span class="btn__hover">LeadPulse Code <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
+            <span class="btn__dot"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Image -->
+  <section class="container" style="max-width: 1000px;">
+    <div class="hero-image reveal" style="background: #000; position: relative;">
+      <img src="images/espy-arc-hero.webp" alt="Espy Arc" style="width: 100%; height: 100%; object-fit: cover;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, #000 100%); pointer-events: none;"></div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section style="padding-top: var(--space-8); padding-bottom: var(--space-6);">
+    <div class="container" style="max-width: 1000px;">
+      <h2 class="heading-section reveal" style="margin-bottom: var(--space-8);">Gallery</h2>
+    </div>
+    <div class="container" style="max-width: 1100px;">
+      <div class="espy-gallery-stack">
+        <div class="espy-gallery-stack__item espy-gallery-stack__item--left reveal">
+          <div class="gallery-image" style="background: #000;"><img src="images/espy-gallery-agency.png" alt="Espy Arc agency site" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        </div>
+        <div class="espy-gallery-stack__item espy-gallery-stack__item--right reveal" data-delay="150">
+          <div class="gallery-image" style="background: #000;"><img src="images/espy-gallery-leadpulse.png" alt="LeadPulse lead table" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        </div>
+        <div class="espy-gallery-stack__item espy-gallery-stack__item--left reveal" data-delay="150">
+          <div class="gallery-image" style="background: #000;"><img src="images/espy-gallery-detail.png" alt="LeadPulse detail drawer" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .espy-gallery-stack {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-6);
+      }
+      .espy-gallery-stack__item {
+        width: 85%;
+        transition: opacity var(--duration-reveal) var(--ease-enter),
+                    transform var(--duration-reveal) var(--ease-enter);
+      }
+      .espy-gallery-stack__item--left {
+        align-self: flex-start;
+      }
+      .espy-gallery-stack__item--right {
+        align-self: flex-end;
+      }
+      .espy-gallery-stack__item .gallery-image {
+        aspect-ratio: 16 / 9;
+      }
+      @media (max-width: 767px) {
+        .espy-gallery-stack__item {
+          width: 100%;
+        }
+      }
+    </style>
+  </section>
+
+  <!-- What It Is -->
+  <section class="section" style="padding-top: var(--space-6); padding-bottom: var(--space-8);">
+    <div class="container" style="max-width: 1000px;">
+      <div class="reveal">
+        <h2 class="heading-section" style="margin-bottom: var(--space-4);">What It Is</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: var(--space-5);">
+        <div class="bl-block reveal">
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">A Real Business, Not a Demo</h3>
+          <p class="bl-block__text">Espy Arc is a functioning digital services consultancy that helps small businesses improve how they show up online and how they operate internally. It has pipeline clients, real deliverables, and a live marketing site. The two pillars of the practice are connected: the external side helps clients attract and convert, while the internal side helps them manage and understand what's happening once that opportunity exists.</p>
+        </div>
+        <div class="bl-block reveal" data-delay="50">
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">Two Service Pillars</h3>
+          <p class="bl-block__text">The first pillar, Digital Presence & Growth, covers websites, local SEO, Google Business Profile optimization, review and reputation support, lead capture, and visibility reporting. The second pillar, Business Systems & Insights, covers structured tracking systems, dashboards, CRM-style tools, operational enablement, and analysis-ready data setups. Most small businesses need help on both sides. Espy Arc delivers both under one engagement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- External Pillar -->
+  <section class="section section--alt" style="padding-top: var(--space-8); padding-bottom: var(--space-8);">
+    <div class="container" style="max-width: 1000px;">
+      <div class="reveal">
+        <h2 class="heading-section" style="margin-bottom: var(--space-4);">Digital Presence & Growth</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: var(--space-5);">
+        <div class="bl-block reveal">
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">What the External Side Delivers</h3>
+          <p class="bl-block__text">For one client engagement (a residential and commercial epoxy flooring contractor), the external deliverables included a strategic market assessment covering competitive landscape analysis across seven direct competitors, local market sizing estimating an $11.2M residential market in Snohomish County alone, and industry trend analysis. That research fed into a full digital growth playbook: Google Business Profile optimization with step-by-step execution sprints, a 25+ page sitemap with URL slugs and priority rankings, page-by-page content blueprints, SEO keyword mapping with primary, secondary, and long-tail targets per page, a review generation system, and a 90-day content calendar with budget.</p>
+        </div>
+        <div class="bl-block reveal" data-delay="50">
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">Brand and Copy Strategy</h3>
+          <p class="bl-block__text">The engagement also produced a complete brand messaging system: a master copy brief defining voice, positioning, target audiences across three tiers, five messaging pillars, and tone-by-page-type guidelines. From that foundation, a homepage copy brief prescribed the messaging hierarchy, buyer anxieties the page must address, and the emotional impression the site must create within 10 seconds. The final deliverable was production-ready homepage copy, section by section, with strategic editorial notes explaining what each block is doing and why.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internal Pillar -->
+  <section class="section" style="padding-top: var(--space-8); padding-bottom: var(--space-8);">
+    <div class="container" style="max-width: 1000px;">
+      <div class="reveal">
+        <h2 class="heading-section" style="margin-bottom: var(--space-4);">Business Systems & Insights</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: var(--space-5);">
+        <div class="bl-block reveal">
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">LeadPulse: A Tool Built for a Client</h3>
+          <p class="bl-block__text">The same client needed an operational system. They were running paid Facebook Lead Ads that generated prospects fast, but leads were getting lost in scattered text messages, missed callbacks, and forgotten follow-ups. LeadPulse was built to solve that: a purpose-built lead intake CRM that automatically ingests Facebook Lead Ad submissions via webhook, parses text notifications into structured records, supports Excel bulk import, and gives the owner a fast triage interface with status tracking, urgency timers, activity logging, and real-time notifications when new leads arrive.</p>
+        </div>
+        <div class="bl-block reveal" data-delay="50">
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">How It Works</h3>
+          <p class="bl-block__text">Three ingestion paths feed into one system: a Facebook Lead Ads webhook endpoint that receives, validates, and stores leads automatically; a text-paste parser where the owner can copy a forwarded notification and get a structured record; and an Excel upload for bulk imports with header matching and per-row error reporting. The lead table supports status filtering, sorting, and urgency indicators. A detail drawer shows editable fields (sqft estimate, quote amount, notes, follow-up date) and a per-lead activity log. Real-time Supabase subscriptions trigger toast notifications when new leads arrive. Built with Next.js, TypeScript, Tailwind CSS, shadcn/ui, Supabase, and Zod.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What This Demonstrates -->
+  <section class="section section--alt" style="padding-top: var(--space-8); padding-bottom: var(--space-8);">
+    <div class="container" style="max-width: 1000px;">
+      <div class="reveal">
+        <h2 class="heading-section" style="margin-bottom: var(--space-4);">What This Demonstrates</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: var(--space-5);">
+        <div class="bl-block reveal">
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">End-to-End Client Delivery</h3>
+          <p class="bl-block__text">This is not a portfolio exercise. It is a real engagement with a real client, spanning research, strategy, content, and implementation. The work moves from market assessment through competitive analysis, brand positioning, copy production, site architecture, SEO planning, and custom tool development. Each deliverable builds on the previous one and feeds the next. The output is not a deck or a set of recommendations. It is actionable work product the client can execute against immediately.</p>
+        </div>
+        <div class="bl-block reveal" data-delay="50">
+          <h3 class="bl-block__title" style="font-size: var(--text-xl);">AI-Assisted Professional Services</h3>
+          <p class="bl-block__text">Every deliverable in this engagement was produced using AI-assisted workflows: the market assessment, the growth playbook, the copy briefs, the agency site itself, and LeadPulse. This is the same documentation-driven, AI-assisted development methodology used across the rest of the portfolio, applied to real professional services delivery for a paying client. The tools and the process are the same. The difference is that someone is building a business on the output.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="container" style="max-width: 1000px;">
+    <div class="quote-block reveal">
+      <p class="quote-block__text">"The best small business partners don't just build websites or set up dashboards. They connect how a business attracts customers with how it operates once those customers show up."</p>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="section" style="padding-top: var(--space-8);">
+    <div class="container" style="max-width: 1000px;">
+      <h2 class="heading-section reveal" style="margin-bottom: var(--space-8);">Related Projects</h2>
+      <div class="project-grid reveal">
+        <a href="the-barter.html" class="project-card">
+          <div class="project-card__image" style="background: #000;"><img src="images/tb-card-hero.png" alt="The Barter - Vendor Growth OS" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;"></div>
+          <div class="project-card__body">
+            <div class="project-card__badges">
+              <span class="badge">Customer Success</span>
+              <span class="text-small">2026</span>
+            </div>
+            <h3 class="heading-card">The Barter</h3>
+            <p class="project-card__desc">AI-assisted vendor growth workspace with diagnostics, decision support, and QBR generation for retail CSMs.</p>
+          </div>
+        </a>
+        <a href="domain-security.html" class="project-card">
+          <div class="project-card__image"><img src="images/ds-card-sentinel.png" alt="Brand Protection Control Center" style="width: 100%; height: 100%; object-fit: cover;"></div>
+          <div class="project-card__body">
+            <div class="project-card__badges">
+              <span class="badge">Brand Protection</span>
+              <span class="text-small">2026</span>
+            </div>
+            <h3 class="heading-card">Brand Protection Control Center</h3>
+            <p class="project-card__desc">Domain threat intelligence dashboard with live scanning, multi-source enrichment, AI triage, and full case-to-enforcement workflow.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--alt" style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+    <div class="container--mid reveal">
+      <h3 class="heading-subsection" style="margin-bottom: var(--space-8);">Interested in working together?</h3>
+      <a href="hire-me.html" class="btn btn--primary">
+        <span class="btn__text">Get in Touch</span>
+        <span class="btn__hover">Get in Touch <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        <span class="btn__dot"></span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="container">
+    <div class="footer">
+      <span class="footer__credits">&copy; 2026 Tony Mikityuk</span>
+      <ul class="footer__links">
+        <li><a href="mailto:mikityuk.tony@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/tonymikityuk/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/tqny/Tony-s-Site" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <div class="chatbot-panel" id="chatbot">
+    <div class="chatbot-panel__body">
+      <div class="chatbot-panel__header">
+        <div>
+          <div class="chatbot-panel__title">AI Assistant</div>
+          <div class="chatbot-panel__subtitle">Ask me about Tony</div>
+        </div>
+        <button class="chatbot-panel__close" onclick="toggleChat()">✕</button>
+      </div>
+      <div class="chatbot-panel__messages" id="chatMessages">
+        <div class="chat-msg chat-msg--assistant">Hi! I'm Tony's AI assistant. Ask me about his background, projects, or how he can help your team.</div>
+      </div>
+      <div class="chatbot-panel__form-wrap">
+        <div class="chatbot-panel__input-shell">
+          <div class="chatbot-panel__input-inner">
+            <form class="chatbot-panel__form" onsubmit="handleChat(event)">
+              <textarea class="chatbot-panel__input" id="chatInput" placeholder="Send a message..." rows="1" autocomplete="off"></textarea>
+              <button type="submit" class="chatbot-panel__send" id="chatSend">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="chatbot-panel__input-shadow"></div>
+      </div>
+    </div>
+  </div>
+  <button class="chatbot-toggle" onclick="toggleChat()" aria-label="Chat">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -20,7 +20,7 @@ Hiring managers evaluating non-traditional candidates (business background pivot
 
 ## What's in the Site
 
-- **8 pages:** Home (index.html), Agentic Projects listing (projects.html), 4 dedicated project detail pages (strange-atlas.html, domain-security.html, the-barter.html, project-site.html), generic project template (project-detail.html), Contact & FAQ (hire-me.html)
+- **9 pages:** Home (index.html), Agentic Projects listing (projects.html), 5 dedicated project detail pages (strange-atlas.html, domain-security.html, the-barter.html, project-site.html, espy-arc.html), generic project template (project-detail.html), Contact & FAQ (hire-me.html)
 - **Three.js particle hero** with slow wave animation (vanilla JS, CDN r128, no React)
 - **Spline 3D robot** in the hero that triggers the AI chatbot on click
 - **AI-powered chatbot** on every page — real conversational AI via Kimi 2.5, proxied through a Cloudflare Worker. The bot is loaded with Tony's full background, skills, projects, and target roles, and acts as a warm, informed advocate. Includes typing animation, example question chips, conversation history, and session limits.
@@ -43,7 +43,7 @@ What's intentionally not included: no CMS, no contact form submission handler, n
 3. **Personal Brand Site** — This repo. From-scratch portfolio built entirely with AI-assisted development, featuring Three.js animations, Spline 3D, and an AI chatbot.
 4. **The Barter** — AI-assisted customer success workspace for managing retail vendor portfolios, with diagnostics, decision support, and QBR generation. Built with React 19, TypeScript, Tailwind CSS 4, shadcn/ui, Recharts, Framer Motion. [Live](https://tqny.github.io/the-barter/) | [Code](https://github.com/tqny/the-barter)
 
-Project 05 is a placeholder (coming soon).
+5. **Espy Arc** — A digital growth and business systems consultancy for small businesses. Two service pillars: Digital Presence & Growth (websites, SEO, lead gen) and Business Systems & Insights (tracking systems, dashboards, CRM tools). Includes LeadPulse, a custom lead intake CRM built for a client. Agency site at [maxtone-group.vercel.app](https://maxtone-group.vercel.app), LeadPulse at [leadpulse-one.vercel.app](https://leadpulse-one.vercel.app) | [Code](https://github.com/tqny/leadpulse)
 
 ## Architecture
 
@@ -55,6 +55,7 @@ Tony's Site/
 ├── domain-security.html    # Project detail — Brand Protection Control Center
 ├── the-barter.html         # Project detail — The Barter (Vendor Growth OS)
 ├── project-site.html       # Project detail — this site itself
+├── espy-arc.html           # Project detail — Espy Arc (digital services consultancy)
 ├── project-detail.html     # Generic project detail template (placeholder projects)
 ├── hire-me.html            # Standalone Contact & FAQ page
 ├── css/

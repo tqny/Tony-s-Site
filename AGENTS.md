@@ -95,8 +95,8 @@ These values live in `js/wave.js`. Each page calls `initWaveAnimation()` with pa
 
 - **Design tokens** — these cascade everywhere. Changing a token affects the entire site.
 - **Three.js parameters** — must stay synced across pages (see above).
-- **Nav and footer markup** — duplicated across all 8 HTML pages. Changes must be applied to every file.
-- **Chatbot widget markup** — duplicated across all 8 HTML pages. Same rule applies.
+- **Nav and footer markup** — duplicated across all 9 HTML pages. Changes must be applied to every file.
+- **Chatbot widget markup** — duplicated across all 9 HTML pages. Same rule applies.
 - **Chatbot system prompt** — contains Tony's professional narrative. Changes affect how the bot represents him to visitors.
 - **Worker CORS origins** — must include all domains that will call the API (currently `tqny.github.io` + localhost variants).
 - **Spline 3D robot** — only on `index.html`. Do not add to other pages without considering load performance.
@@ -105,7 +105,7 @@ These values live in `js/wave.js`. Each page calls `initWaveAnimation()` with pa
 
 - Work one scoped task at a time.
 - Test changes visually before moving on (open in browser or verify markup).
-- If touching shared elements (nav, footer, chatbot markup), update all 7 HTML files.
+- If touching shared elements (nav, footer, chatbot markup), update all 9 HTML files.
 - Commit after each meaningful change, not in bulk.
 
 ## Current State
@@ -114,6 +114,7 @@ These values live in `js/wave.js`. Each page calls `initWaveAnimation()` with pa
 - Project 02 (Brand Protection Control Center) has a dedicated detail page (`domain-security.html`) with real screenshots and card images.
 - Project 03 (Personal Brand Site) has a dedicated detail page (`project-site.html`) with real screenshots.
 - Project 04 (The Barter) has a dedicated detail page (`the-barter.html`) with real screenshots and card images. Promoted to Featured.
+- Project 05 (Espy Arc) has a dedicated detail page (`espy-arc.html`) with placeholder images. Links to the agency site (maxtone-group.vercel.app) and LeadPulse (leadpulse-one.vercel.app).
 - `project-detail.html` still exists as a generic template (currently titled "Multi-Agent Research Assistant") with placeholder gallery. No dedicated project wired to it yet.
 - All project cards and Related Projects sections have real images wired in.
 - The contact form (`index.html`, `hire-me.html`) has no backend — `action="#"` is intentional.
